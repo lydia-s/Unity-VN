@@ -7,7 +7,6 @@ public class GenerateMessage : MonoBehaviour
 {
     public TextMeshProUGUI inputText = null;
     public GameObject messageBox = null;
-    public GameObject replyBox = null;
     public GameObject placeMessage = null;
  
     // Start is called before the first frame update
@@ -26,12 +25,8 @@ public class GenerateMessage : MonoBehaviour
        
         GameObject msg = Instantiate(messageBox) as GameObject;
         msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(inputText.text);
-        msg.transform.SetParent(placeMessage.transform, false);
+        msg.transform.SetParent(placeMessage.transform.GetChild(0), false);
         
     }
-    public void CreateReply() {
-        GameObject msg = Instantiate(replyBox) as GameObject;
-        msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(inputText.text);
-        msg.transform.SetParent(placeMessage.transform, false);
-    }
+    
 }

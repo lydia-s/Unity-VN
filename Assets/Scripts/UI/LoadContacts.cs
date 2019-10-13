@@ -12,22 +12,21 @@ public class LoadContacts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateContacts gC = this.GetComponent<GenerateContacts>();
-        gC.AddContacts();
-        GetContact("Geeki", gC.contacts);
-        GetContact("Pablo", gC.contacts);
 
+        PopulateList();
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     //add name and avatar image to a button in a list
     public void PopulateList() {
-        
+        GenerateContacts gC = this.GetComponent<GenerateContacts>();
+        gC.AddContacts();
+        foreach (KeyValuePair<string, ContactInfo> entry in gC.contacts)
+        {
+            GetContact(entry.Key, gC.contacts);//add each contact to list
+            
+        }
+
     }
    
     //Extract a contact from a data structure

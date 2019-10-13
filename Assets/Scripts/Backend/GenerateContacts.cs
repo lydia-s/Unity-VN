@@ -8,9 +8,11 @@ public class GenerateContacts : MonoBehaviour
     //Contact images
     public Sprite geeki_img;
     public Sprite pablo_img;
+    public Sprite ky_img;
     //Contact message histories
     public ArrayList geekiMsgs = new ArrayList();
     public ArrayList pabloMsgs = new ArrayList();
+    public ArrayList kyMsgs = new ArrayList();
     //Contact Dictionary
     public Dictionary<string, ContactInfo> contacts = new Dictionary<string, ContactInfo>();
 
@@ -31,5 +33,6 @@ public class GenerateContacts : MonoBehaviour
 
         SetContact("Geeki", 23, "Musician, nature lover", geeki_img, geekiMsgs);
         SetContact("Pablo", 21, "Painter", pablo_img, pabloMsgs);
+        SetContact("InkKy", 24, "Professional Illustrator", ky_img, kyMsgs);
     }
 }
