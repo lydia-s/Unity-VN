@@ -8,18 +8,7 @@ public class GenerateMessage : MonoBehaviour
     public TextMeshProUGUI inputText = null;
     public GameObject messageBox = null;
     public GameObject placeMessage = null;
- 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void CreateMessage() {
        

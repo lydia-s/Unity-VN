@@ -13,9 +13,11 @@ public class LoadContacts : MonoBehaviour
     void Start()
     {
 
-        PopulateList();
+        //PopulateList();
 
     }
+    
+
 
     //add name and avatar image to a button in a list
     public void PopulateList() {
@@ -28,6 +30,7 @@ public class LoadContacts : MonoBehaviour
         }
 
     }
+
    
     //Extract a contact from a data structure
     public void GetContact(string id, Dictionary<string, ContactInfo> contacts) {

@@ -18,6 +18,11 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("ContactsList");
     }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void Quit()
     {
         Application.Quit();

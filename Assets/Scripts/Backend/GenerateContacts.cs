@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GenerateContacts : MonoBehaviour
 {
     //Contact images
-    public Sprite geeki_img;
-    public Sprite pablo_img;
-    public Sprite ky_img;
+    public Sprite profile_img;
+
     //Contact message histories
-    public ArrayList geekiMsgs = new ArrayList();
-    public ArrayList pabloMsgs = new ArrayList();
-    public ArrayList kyMsgs = new ArrayList();
+    public ArrayList contactMsgs = new ArrayList();
     //Contact Dictionary
     public Dictionary<string, ContactInfo> contacts = new Dictionary<string, ContactInfo>();
+
+    public TextMeshProUGUI name;
 
     //Set contact information
     public void SetContact(string name, int age, string bio, Sprite avatar, ArrayList msgHis)
@@ -28,11 +28,30 @@ public class GenerateContacts : MonoBehaviour
         contacts.Add(name, cI);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            AddContacts();
+
+        }
+    }
+
     //Add contact to dictionary
     public void AddContacts() {
-
-        SetContact("Geeki", 23, "Musician, nature lover", geeki_img, geekiMsgs);
+        if (contacts.ContainsKey(name.text.ToString()))
+        {
+            return;
+        }
+        else {
+            
+            SetContact(name.text.ToString(), 23, "Empty", profile_img, contactMsgs);
+            LoadContacts loadContacts = this.GetComponent<LoadContacts>();
+            loadContacts.GetContact(name.text.ToString(), contacts);
+        }
+        
+        /*SetContact("Jenny", 23, "Musician, nature lover", geeki_img, geekiMsgs);
         SetContact("Pablo", 21, "Painter", pablo_img, pabloMsgs);
-        SetContact("InkKy", 24, "Professional Illustrator", ky_img, kyMsgs);
+        SetContact("Ben", 24, "Professional Illustrator", ky_img, kyMsgs);*/
     }
 }
