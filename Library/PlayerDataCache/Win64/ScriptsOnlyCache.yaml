@@ -50,7 +50,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/ContactsList.unity:
+    Assets/Resources/Scenes/ContactsList.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -72,6 +72,8 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 9704}
+    - Class: 114
       Script: {instanceID: 9720}
     - Class: 114
       Script: {instanceID: 9774}
@@ -88,6 +90,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10142}
     - Class: 114
+      Script: {instanceID: 10146}
+    - Class: 114
       Script: {instanceID: 10156}
     - Class: 114
       Script: {instanceID: 10346}
@@ -99,6 +103,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10500}
     - Class: 114
       Script: {instanceID: 10672}
+    - Class: 114
+      Script: {instanceID: 10692}
     - Class: 114
       Script: {instanceID: 10790}
     - Class: 114
@@ -112,15 +118,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11740}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 11854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -137,7 +143,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/MainMenu.unity:
+    Assets/Resources/Scenes/MainMenu.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -161,15 +167,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10472}
     - Class: 114
+      Script: {instanceID: 10790}
+    - Class: 114
       Script: {instanceID: 10902}
     - Class: 114
       Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 11854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -184,7 +192,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Messenger.unity:
+    Assets/Resources/Scenes/Messenger.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -236,17 +244,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11636}
+      Script: {instanceID: 11638}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 11918}
+      Script: {instanceID: 11920}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -498,7 +506,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 923cab5ee47d07e9ceeecf8b362e65d8
+      Hash: 733b36f91933d9a02f3f4628af619d11
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GenerateContacts
@@ -906,7 +914,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: b27503e20ecc6b90f3a24066b1f080e2
+      Hash: d1ce0c9fae12a27d1832c6bfdd1d95fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GenerateMessage
@@ -1038,7 +1046,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: e3c3be5eeddaae92625ca26f36863a5d
+      Hash: 35b9c715d241eeb4d98c51abfa1a91a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SaveAndUpdateMessages
@@ -1050,7 +1058,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
-  - Assets/Scenes/ContactsList.unity
-  - Assets/Scenes/Messenger.unity
-  - Assets/Scenes/MainMenu.unity
-  playerPath: C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V3)/Playtest/VisualNovel.exe
+  - Assets/Resources/Scenes/ContactsList.unity
+  - Assets/Resources/Scenes/Messenger.unity
+  - Assets/Resources/Scenes/MainMenu.unity
+  playerPath: C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Playtest/VisualNovel.exe

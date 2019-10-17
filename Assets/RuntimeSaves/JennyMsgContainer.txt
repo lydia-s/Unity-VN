@@ -1,4 +1,0 @@
-Hello1​|Sent
-Hello2|Received
-Please work​|Sent
-Thank you​|Received

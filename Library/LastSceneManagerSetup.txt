@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Messenger.unity
+- path: Assets/Resources/Scenes/Messenger.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

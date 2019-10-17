@@ -9,8 +9,8 @@ public class CustomiseMessengerInfo : MonoBehaviour
     /*
      * CustomiseMessengerInfo personalises the components of a messenger scene to a specific person
      */
-    public static string contactName = "Placeholder name";
-    public static string contactBio = "Placeholder bio";
+    public static string contactName;
+    public static string contactBio;
     public static Sprite avatar;
     // Start is called before the first frame update
     void Start()
@@ -19,13 +19,9 @@ public class CustomiseMessengerInfo : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void SetAvatarInfo() {
-        this.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = avatar;
-        this.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(contactName);
+        gameObject.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = avatar;
+        gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(contactName);
     }
 }

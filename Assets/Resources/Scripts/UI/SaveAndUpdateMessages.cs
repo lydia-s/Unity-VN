@@ -25,7 +25,7 @@ public class SaveAndUpdateMessages : MonoBehaviour
 
     //Called when a message is posted
     public void SaveMessageToFile(string messageContent, string messageType) {
-        string localPath = "Assets/" + "RuntimeSaves/" + avatarName.text.ToString() + "MsgContainer.txt";
+        string localPath = Application.dataPath + "/"+ avatarName.text.ToString() + "MsgContainer.txt";
 
         if (!File.Exists(localPath)) {
             File.Create(localPath).Dispose();
@@ -41,7 +41,7 @@ public class SaveAndUpdateMessages : MonoBehaviour
 
     //Called when the messenger screen is opened
     public void LoadMessagesFromFile() {
-        string localPath = "Assets/" + "RuntimeSaves/" + avatarName.text.ToString() + "MsgContainer.txt";
+        string localPath = Application.dataPath + "/" + avatarName.text.ToString() + "MsgContainer.txt";
         if (!File.Exists(localPath))
         {
             File.Create(localPath).Dispose();
