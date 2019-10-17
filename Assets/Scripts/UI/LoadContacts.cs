@@ -13,7 +13,7 @@ public class LoadContacts : MonoBehaviour
     void Start()
     {
 
-        //PopulateList();
+        PopulateList();
 
     }
     

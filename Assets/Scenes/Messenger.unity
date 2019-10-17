@@ -805,6 +805,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 571089078}
+  - component: {fileID: 571089079}
+  - component: {fileID: 571089080}
   m_Layer: 5
   m_Name: Phone
   m_TagString: Untagged
@@ -834,6 +836,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 30}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &571089079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571089077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ac1ff569230a468e61d31b9c045cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatarName: {fileID: 346328489}
+  received: {fileID: 7024343415280399092, guid: ec29d7f8210278449ae457f93272e683,
+    type: 3}
+  sent: {fileID: 3443864474361466957, guid: 237f6bca815fe2e43b6bb75a5c1cb049, type: 3}
+  messageContainer: {fileID: 1513908783}
+--- !u!114 &571089080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571089077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06449ebdc94954a4782fd49fba844947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputText: {fileID: 30708583}
+  messageBox: {fileID: 7024343415280399092, guid: ec29d7f8210278449ae457f93272e683,
+    type: 3}
+  placeMessage: {fileID: 1513908783}
+  savePlace: {fileID: 571089077}
 --- !u!1 &625393816
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +881,6 @@ GameObject:
   - component: {fileID: 625393817}
   - component: {fileID: 625393820}
   - component: {fileID: 625393819}
-  - component: {fileID: 625393822}
   - component: {fileID: 625393818}
   - component: {fileID: 625393821}
   m_Layer: 5
@@ -917,17 +952,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 625393822}
-        m_MethodName: SaveMsgHistory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 625393821}
         m_MethodName: LoadContacts
         m_Mode: 1
@@ -987,19 +1011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f4f2c73dbfa3145be1db31388b0033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &625393822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625393816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39ac1ff569230a468e61d31b9c045cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  avatarName: {fileID: 346328489}
 --- !u!1 &891730114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14.2894745, y: 156.7795}
+  m_AnchoredPosition: {x: 14.2894745, y: 121.111115}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103274108
@@ -1977,6 +1988,7 @@ MonoBehaviour:
   messageBox: {fileID: 7024343415280399092, guid: ec29d7f8210278449ae457f93272e683,
     type: 3}
   placeMessage: {fileID: 1513908783}
+  savePlace: {fileID: 571089077}
 --- !u!114 &1868652426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2212,6 +2224,7 @@ MonoBehaviour:
   messageBox: {fileID: 3443864474361466957, guid: 237f6bca815fe2e43b6bb75a5c1cb049,
     type: 3}
   placeMessage: {fileID: 1513908783}
+  savePlace: {fileID: 571089077}
 --- !u!1001 &5073014497005459393
 PrefabInstance:
   m_ObjectHideFlags: 0

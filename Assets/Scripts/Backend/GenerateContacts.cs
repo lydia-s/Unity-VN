@@ -30,26 +30,28 @@ public class GenerateContacts : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+       /* if (Input.GetKeyDown(KeyCode.Return))
         {
             AddContacts();
 
-        }
+        }*/
     }
 
     //Add contact to dictionary
     public void AddContacts() {
-        if (contacts.ContainsKey(name.text.ToString()))
-        {
-            return;
-        }
-        else {
-            
-            SetContact(name.text.ToString(), 23, "Empty", profile_img, contactMsgs);
-            LoadContacts loadContacts = this.GetComponent<LoadContacts>();
-            loadContacts.GetContact(name.text.ToString(), contacts);
-        }
-        
+        /* if (contacts.ContainsKey(name.text.ToString()))
+         {
+             return;
+         }
+         else {
+
+             SetContact(name.text.ToString(), 23, "Empty", profile_img, contactMsgs);
+             LoadContacts loadContacts = this.GetComponent<LoadContacts>();
+             loadContacts.GetContact(name.text.ToString(), contacts);
+         }*/
+
+        SetContact("Jenny", 23, "Musician, nature lover", profile_img, contactMsgs);
+        SetContact("Pablo", 21, "Painter", profile_img, contactMsgs);
         /*SetContact("Jenny", 23, "Musician, nature lover", geeki_img, geekiMsgs);
         SetContact("Pablo", 21, "Painter", pablo_img, pabloMsgs);
         SetContact("Ben", 24, "Professional Illustrator", ky_img, kyMsgs);*/
