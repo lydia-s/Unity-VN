@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 public class LoadContacts : MonoBehaviour
 {
-    public GameObject contactList = null;
-    public GameObject contactButton = null;
-    ArrayList ids = new ArrayList();
+    public GameObject contactList;
+    public GameObject contactButton;
+
     
     // Start is called before the first frame update
     void Start()
@@ -16,12 +16,10 @@ public class LoadContacts : MonoBehaviour
         PopulateList();
 
     }
-    
 
-
-    //add name and avatar image to a button in a list
+    //add each person to a button in a list
     public void PopulateList() {
-        GenerateContacts gC = this.GetComponent<GenerateContacts>();
+        GenerateContacts gC = GetComponent<GenerateContacts>();
         gC.AddContacts();
         foreach (KeyValuePair<string, ContactInfo> entry in gC.contacts)
         {
@@ -31,17 +29,16 @@ public class LoadContacts : MonoBehaviour
 
     }
 
-   
-    //Extract a contact from a data structure
+    //Extract a contact from a dictionary and instantiate button with info
     public void GetContact(string id, Dictionary<string, ContactInfo> contacts) {
         
-        
         ContactInfo person = contacts[id];
-        name = person.name;
+        string name = person.name;
         Sprite img = person.avatar;
         GameObject contact = Instantiate(contactButton) as GameObject;
-        
-        contact.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(name);//set name to button
+        contact.name = name;
+        //contact.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(name);//set name to button
+        contact.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = name;
         contact.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = img;//set avatar to button
         contact.transform.SetParent(contactList.transform, false);//add to list view
     }

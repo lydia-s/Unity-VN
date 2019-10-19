@@ -8,6 +8,7 @@ public class GenerateContacts : MonoBehaviour
 {
     //Contact images
     public Sprite profile_img;
+    public Sprite profile_img1;
     //Contact Dictionary
     public Dictionary<string, ContactInfo> contacts = new Dictionary<string, ContactInfo>();
 
@@ -26,8 +27,8 @@ public class GenerateContacts : MonoBehaviour
     //Add contact to dictionary
     public void AddContacts() {
      
-        SetContact("Jenny", 23, "Musician, nature lover", profile_img);
-        SetContact("Pablo", 21, "Painter", profile_img);
+        SetContact("Helen", 23, "Musician, nature lover", profile_img);
+        SetContact("John", 21, "Painter", profile_img1);
 
     }
 }

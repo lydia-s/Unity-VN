@@ -6,22 +6,22 @@ using TMPro;
 using System.IO;
 using System;
 
+
+/*
+ * I need in this class:
+ * A method that saves each message to a file containing messages
+ * The file will contain information in the format: messageContent | messageType \n
+ * Every time the messenger screen is loaded the file content will be loaded and processed into text to display in game objects
+ */
 public class SaveAndUpdateMessages : MonoBehaviour
 {
 
 
     GameObject msgContainer;//the content message container
     public TextMeshProUGUI avatarName;//the avatar name
-    public GameObject received = null;
-    public GameObject sent = null;
-    public GameObject messageContainer;//the grandparent of where the message will go
+    public GameObject received;//received text object
+    public GameObject sent;//sent text object
 
-    /*
-     * We need in this class:
-     * A method that saves each message to a file containing messages
-     * The file will contain information in the format: messageContent | messageType \n
-     * Everytime the messenger screen is loaded the file content will be loaded and processed into text to display in game objects
-     */
 
     //Called when a message is posted
     public void SaveMessageToFile(string messageContent, string messageType) {
@@ -64,7 +64,6 @@ public class SaveAndUpdateMessages : MonoBehaviour
                 
                 gameObject.GetComponent<GenerateMessage>().CreateMessage(sent, message[0]);
             }
-            // Do Something with the input. 
         }
         inp_stm.Close();
     }

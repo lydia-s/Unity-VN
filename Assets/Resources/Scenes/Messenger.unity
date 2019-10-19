@@ -660,6 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947e7978ba7a1924c9833c2eb5aef267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeholderAvatar: {fileID: 1036924800}
+  placeholderName: {fileID: 346328489}
 --- !u!114 &346328489 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5073014497603476051, guid: 65f40c8b1b521e74bbed03a6da425a74,
@@ -1223,6 +1225,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014213286}
   m_CullTransparentMesh: 0
+--- !u!1 &1036924800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5073014497225214615, guid: 65f40c8b1b521e74bbed03a6da425a74,
+    type: 3}
+  m_PrefabInstance: {fileID: 5073014497005459393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1103274106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14.2894745, y: 121.111115}
+  m_AnchoredPosition: {x: 14.289459, y: 19.718237}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103274108
@@ -1693,7 +1701,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 137083040}
   m_Direction: 0
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.99998873
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 9168388427040200000}
   - component: {fileID: 9168388427040200001}
   - component: {fileID: 9168388427040200006}
-  - component: {fileID: 6686498267002015416}
+  - component: {fileID: -280213578779150841}
   m_Layer: 5
   m_Name: ContactButton
   m_TagString: Untagged
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6686498267002015416}
-        m_MethodName: LoadMessenger
+      - m_Target: {fileID: -280213578779150841}
+        m_MethodName: LoadMessengerScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,7 +254,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6686498267002015416
+--- !u!114 &-280213578779150841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,9 +263,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9168388427040200004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f4f2c73dbfa3145be1db31388b0033, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e1b4948e0666484da72762a3c8b05c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: {fileID: 9168388427220346196}
+  contactAvatar: {fileID: 5629260776479792070}
 --- !u!1 &9168388427220346202
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +280,7 @@ GameObject:
   - component: {fileID: 9168388427220346199}
   - component: {fileID: 9168388427220346196}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ContactText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Contact
+  m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -398,7 +400,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 9168388427220346196}
-    characterCount: 7
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
