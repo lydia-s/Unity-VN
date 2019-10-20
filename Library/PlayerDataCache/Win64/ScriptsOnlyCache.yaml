@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - AiryUIAnimationManager
     - AiryUIBackButton
     - AiryUIBackButtonManager
+    - BioManager
     - ChangeScene
     - CreateMessageContainer
     - CustomiseMessengerInfo
@@ -37,6 +38,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -255,9 +257,76 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11640}
     - Class: 114
+      Script: {instanceID: 11818}
+    - Class: 114
       Script: {instanceID: 11856}
     - Class: 114
       Script: {instanceID: 11922}
+    - Class: 114
+      Script: {instanceID: 15838}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Resources/Scenes/Profile.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9720}
+    - Class: 114
+      Script: {instanceID: 9960}
+    - Class: 114
+      Script: {instanceID: 10004}
+    - Class: 114
+      Script: {instanceID: 10118}
+    - Class: 114
+      Script: {instanceID: 10346}
+    - Class: 114
+      Script: {instanceID: 10472}
+    - Class: 114
+      Script: {instanceID: 10672}
+    - Class: 114
+      Script: {instanceID: 10790}
+    - Class: 114
+      Script: {instanceID: 10842}
+    - Class: 114
+      Script: {instanceID: 10866}
+    - Class: 114
+      Script: {instanceID: 10904}
+    - Class: 114
+      Script: {instanceID: 11000}
+    - Class: 114
+      Script: {instanceID: 11140}
+    - Class: 114
+      Script: {instanceID: 11364}
+    - Class: 114
+      Script: {instanceID: 11434}
+    - Class: 114
+      Script: {instanceID: 11856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -659,13 +728,13 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: cd495635f9a93b79077f4db0d5cebe4c
+      Hash: 165d1932807e5ffd262de35938099aad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LoadMessenger
   - hash:
       serializedVersion: 2
-      Hash: 2031e77963e1c82173790fd6c9f37a90
+      Hash: 900fb8812ea6d5fa0d0a840eb3371551
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CustomiseMessengerInfo
@@ -1065,9 +1134,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: fda588591f01a4cb2bb4ea778b8c5379
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BioManager
   platform: 19
   scenePathNames:
   - Assets/Resources/Scenes/ContactsList.unity
   - Assets/Resources/Scenes/Messenger.unity
   - Assets/Resources/Scenes/MainMenu.unity
-  playerPath: C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Playtest/VisualNovel.exe
+  - Assets/Resources/Scenes/Profile.unity
+  playerPath: C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Playtest/VisualNovel.exe

@@ -74,17 +74,21 @@
     <Compile Include="Assets\PiUi\Scripts\PiUIManager.cs" />
     <Compile Include="Assets\PiUi\TestScene\Test.cs" />
     <Compile Include="Assets\PiUi\TestScene\TestWorld.cs" />
-    <Compile Include="Assets\Resources\Scripts\Backend\ContactInfo.cs" />
-    <Compile Include="Assets\Resources\Scripts\Backend\DontDestroyOnLoad.cs" />
-    <Compile Include="Assets\Resources\Scripts\Backend\GenerateContacts.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\ChangeScene.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\CreateMessageContainer.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\CustomiseMessengerInfo.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\GenerateMessage.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\LoadContacts.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\LoadMessenger.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\ResizeTextBox.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\SaveAndUpdateMessages.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\ContactList\ContactInfo.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\ContactList\GenerateContacts.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\General\DontDestroyOnLoad.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\General\LikeButton.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\General\PausePlayTrack.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\Messenger\SaveAndUpdateMessages.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadContacts.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadMessenger.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\General\ChangeScene.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\General\CustomiseMessengerInfo.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\General\CustomisePostInfo.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\General\ResizeTextBox.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Messenger\BioManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Messenger\CreateMessageContainer.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Messenger\GenerateMessage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -142,40 +146,40 @@
     <None Include="Assets\JohnMsgContainer.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -355,16 +359,16 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="NGCore">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Assets/Plugins/NGTools/NGCore/NGCore.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Assets/Plugins/NGTools/NGCore/NGCore.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V6)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V7)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
