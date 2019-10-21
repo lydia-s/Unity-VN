@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 6490042198663745932}
-  pause: {fileID: 21300000, guid: c00325ffdacadf14ebd3a6e7f58af026, type: 3}
+  pause: {fileID: 21300000, guid: 149a2d8594c2f5149b422c31f69b5af7, type: 3}
   play: {fileID: 21300000, guid: 98ded06308c5b3a48b33be4ada0a1110, type: 3}
   pauseplayButton: {fileID: 6490042198663745970}
 --- !u!82 &6490042198663745932

@@ -6,8 +6,15 @@ using UnityEngine.UI;
 public class LikeButton : MonoBehaviour
 {
     public Image heart;
-    bool hearted = false;
-    Button but;
+    static bool hearted = false;
+
+
+    private void Start()
+    {
+        if (hearted == true) {
+            heart.color = Color.red;
+        }
+    }
     public void HeartThis() {
         if (hearted == false)
         {
@@ -23,15 +30,5 @@ public class LikeButton : MonoBehaviour
         }
     }
 
-    public void select()
-    {
-        heart.color = Color.red;
-    }
-    public void unselect()
-    {
-        heart.color = Color.grey;
-        Color col = heart.color;
-        col.a = 0.40f;
-        heart.color = col;
-    }
+
 }
