@@ -21,5 +21,6 @@ public class LoadMessenger : MonoBehaviour
         //get list of message objects and populate list view content with them
         CustomiseMessengerInfo.contactBio = bio.text;
         SceneManager.LoadScene("Messenger");
+
     }
 }

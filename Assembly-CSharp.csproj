@@ -633,6 +633,7 @@
     <Compile Include="Assets\Resources\Scripts\Backend\General\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\LikeButton.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\PausePlayTrack.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\Messenger\FungusLoadSave.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\Messenger\SaveAndUpdateMessages.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadContacts.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadMessenger.cs" />
@@ -705,6 +706,7 @@
     <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Key\CC-BY.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Fungus\Integrations\Spine\Readme.txt" />
+    <None Include="Assets\JohnMsgContainer.txt" />
     <None Include="Assets\Fungus\Fonts\Amaranth\SIL Open Font License.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -720,7 +722,6 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Lua\fungus.txt" />
-    <None Include="Assets\JohnMsgContainer.txt" />
     <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Door\CC-BY.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Fungus\Docs\CHANGELOG.txt" />
