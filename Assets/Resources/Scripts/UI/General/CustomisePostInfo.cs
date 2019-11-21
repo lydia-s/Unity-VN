@@ -8,8 +8,7 @@ using TMPro;
  */
 public class CustomisePostInfo : MonoBehaviour
 {
-    public TextMeshProUGUI contactName;
-    public Image avatar;
+    
     public Image placeholderAvatar;
     public TextMeshProUGUI placeholderName;
     // Start is called before the first frame update
@@ -20,6 +19,8 @@ public class CustomisePostInfo : MonoBehaviour
 
 
     public void SetPostInfo() {
+        TextMeshProUGUI contactName = GameObject.Find("Avatar").transform.Find("Avatar name").GetComponent<TextMeshProUGUI>();
+        Image avatar = GameObject.Find("Avatar").GetComponent<Image>();
         placeholderAvatar.sprite = avatar.sprite;
         placeholderName.text = contactName.text.ToString();
     }

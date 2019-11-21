@@ -12,14 +12,14 @@ public class LoadMessenger : MonoBehaviour
 {
     public TextMeshProUGUI contact;
     public TextMeshProUGUI bio;
-    public Image contactAvatar;
     public void LoadMessengerScreen()
     {
         //this is getting original prefab text not actual text but don't know why
-        CustomiseMessengerInfo.contactName = contact.text.ToString();//gameobject.name
-        CustomiseMessengerInfo.avatar = contactAvatar.sprite;
+        PlayerPrefs.SetString("name", contact.text.ToString());
+       // CustomiseMessengerInfo.contactName = contact.text.ToString();//gameobject.name
         //get list of message objects and populate list view content with them
-        CustomiseMessengerInfo.contactBio = bio.text;
+        PlayerPrefs.SetString("bio", bio.text.ToString());
+        //CustomiseMessengerInfo.contactBio = bio.text;
         SceneManager.LoadScene("Messenger");
 
     }

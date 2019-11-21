@@ -8,9 +8,7 @@ using TMPro;
  */
 public class CustomiseMessengerInfo : MonoBehaviour
 {
-    public static string contactName;
-    public static Sprite avatar;
-    public static string contactBio;
+
     public GameObject placeholderAvatar;
     public TextMeshProUGUI placeholderName;
     public TextMeshProUGUI placeholderBio;
@@ -22,8 +20,8 @@ public class CustomiseMessengerInfo : MonoBehaviour
 
 
     public void SetAvatarInfo() {
-        placeholderAvatar.GetComponent<Image>().sprite = avatar;
-        placeholderName.text = contactName;
-        placeholderBio.text = contactBio;
+      //  placeholderAvatar.GetComponent<Image>().sprite = avatar;
+        placeholderName.text = PlayerPrefs.GetString("name");
+        placeholderBio.text = PlayerPrefs.GetString("bio");
     }
 }
