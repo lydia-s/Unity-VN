@@ -23,6 +23,9 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("ContactsList");
        
     }
+    public void LoadRoom() {
+        SceneManager.LoadScene("Room");
+    }
 
     public void LoadMenu()
     {

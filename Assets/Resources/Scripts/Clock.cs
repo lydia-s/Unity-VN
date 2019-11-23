@@ -19,7 +19,7 @@ public class Clock : MonoBehaviour
     void Update()
     {
         
-        timeStart += Time.deltaTime;
+        timeStart += Time.deltaTime*0.3f;
         string seconds = Mathf.Floor(timeStart%60).ToString("00");//actually minutes in our universe
         string minutes = Mathf.Floor(timeStart / 60).ToString("00");//actually hours in our universe
         clock.text = minutes + " : " + seconds;

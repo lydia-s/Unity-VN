@@ -1,6 +1,2 @@
-Hello​|Sent
-Hello​|Received
-Hello​|Sent
-HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello​|Received
-HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello​|Sent
-HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello​|Received
+Hey helen how are you?​|Received
+Hey helen how are you?​|Sent
