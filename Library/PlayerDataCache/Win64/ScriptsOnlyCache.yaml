@@ -24,6 +24,7 @@ ScriptsOnlyBuild:
     - Persistance
     - ResizeTextBox
     - SaveAndUpdateMessages
+    - StatBars
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -55,6 +56,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
@@ -288,7 +290,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 21558}
+      Script: {instanceID: 19738}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -402,7 +404,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 21558}
+      Script: {instanceID: 19738}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -435,6 +437,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9724}
     - Class: 114
+      Script: {instanceID: 9932}
+    - Class: 114
       Script: {instanceID: 9984}
     - Class: 114
       Script: {instanceID: 10478}
@@ -454,7 +458,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11802}
     - Class: 114
       Script: {instanceID: 12038}
+    - Class: 114
+      Script: {instanceID: 12078}
+    - Class: 114
+      Script: {instanceID: 15434}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1289,6 +1299,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: e1b569ec789840b64d7d60eb1b064eea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StatBars
   platform: 19
   scenePathNames:
   - Assets/Resources/Scenes/MainMenu.unity

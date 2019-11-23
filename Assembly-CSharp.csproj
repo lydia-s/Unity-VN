@@ -81,14 +81,15 @@
     <Compile Include="Assets\Resources\Scripts\Backend\General\PausePlayTrack.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\Messenger\SaveAndUpdateMessages.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\Profile\LoadPostsContent.cs" />
-    <Compile Include="Assets\Resources\Scripts\Clock.cs" />
-    <Compile Include="Assets\Resources\Scripts\Persistance.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadContacts.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadMessenger.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\General\ChangeScene.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\General\Clock.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\General\CustomiseMessengerInfo.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\General\CustomisePostInfo.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\General\Persistance.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\General\ResizeTextBox.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\General\StatBars.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\BioManager.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\CreateMessageContainer.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\GenerateMessage.cs" />
