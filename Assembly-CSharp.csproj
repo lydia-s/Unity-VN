@@ -78,7 +78,11 @@
     <Compile Include="Assets\Resources\Scripts\Backend\ContactList\GenerateContacts.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\LikeButton.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\General\LoadData.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\PausePlayTrack.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\General\PlayerData.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\General\SaveData.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\General\SaveSystem.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\Messenger\SaveAndUpdateMessages.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\Profile\LoadPostsContent.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadContacts.cs" />

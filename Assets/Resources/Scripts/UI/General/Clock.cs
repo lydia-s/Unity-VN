@@ -4,9 +4,10 @@ using UnityEngine;
 using TMPro;
 using System;
 
+
 public class Clock : MonoBehaviour
 {
-    float timeStart = 1020;
+    public float timeStart = 1020;
     public TextMeshProUGUI clock;
     // Start is called before the first frame update
     void Start()

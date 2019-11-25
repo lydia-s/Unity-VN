@@ -7,15 +7,16 @@ public class ChangeScene : MonoBehaviour
 {
     public void LoadGameMenu()
     {
-        PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("PauseMenu");
+        //PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene("PauseMenu");
+        Debug.Log("Went in");
         Time.timeScale = 0f;
 
     }
 
     public void ResumeGame() {
-        string scene = PlayerPrefs.GetString("lastLoadedScene");
-        SceneManager.LoadScene(scene);
+        //string scene = PlayerPrefs.GetString("lastLoadedScene");
+        //SceneManager.LoadScene(scene);
         Time.timeScale = 1f;
     }
     public void LoadContacts()

@@ -17,8 +17,14 @@ public class StatBars : MonoBehaviour
     public Slider sanityBar;
     public Slider submissionBar;
     public TextMeshProUGUI percentageProgress;
-
-
+    
+    public void LoadStats() {
+        PlayerData data = SaveSystem.LoadData();
+        CurrentSleep = data.sleep;
+        CurrentSanity = data.sanity;
+        CurrentProgress = data.progress;
+    }
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +46,9 @@ public class StatBars : MonoBehaviour
             string percent = "" + (CurrentProgress / MaxProgress) * 100 + "%";
             percentageProgress.text = percent;
         }
-        
+        sanityBar.value = CurrentSanity / MaxSanity;
+        sleepBar.value = CurrentSleep / MaxSleep;
+        submissionBar.value = CurrentProgress / MaxProgress;
     }
     void ReduceSanity(float sanityValue) {
         CurrentSanity -= sanityValue;
