@@ -12,6 +12,7 @@ public class CustomiseMessengerInfo : MonoBehaviour
     public GameObject placeholderAvatar;
     public TextMeshProUGUI placeholderName;
     public TextMeshProUGUI placeholderBio;
+    public static Sprite avatar;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class CustomiseMessengerInfo : MonoBehaviour
 
 
     public void SetAvatarInfo() {
-      //  placeholderAvatar.GetComponent<Image>().sprite = avatar;
+        placeholderAvatar.GetComponent<Image>().sprite = avatar;
         placeholderName.text = PlayerPrefs.GetString("name");
         placeholderBio.text = PlayerPrefs.GetString("bio");
     }

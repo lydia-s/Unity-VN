@@ -424,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contact: {fileID: 9168388427220346196}
   bio: {fileID: 4685067997788433011}
-  contactAvatar: {fileID: 5629260776479792070}
+  avatar: {fileID: 5629260776479792070}
 --- !u!1 &9168388427220346202
 GameObject:
   m_ObjectHideFlags: 0

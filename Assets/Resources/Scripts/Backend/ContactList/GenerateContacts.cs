@@ -29,6 +29,6 @@ public class GenerateContacts : MonoBehaviour
      
         SetContact("Helen", 23, "Musician, nature lover", profile_img);
         SetContact("John", 21, "Painter, writer, artist", profile_img1);
-
+        SetContact("John1", 21, "Painter, writer, artist", profile_img1);
     }
 }
