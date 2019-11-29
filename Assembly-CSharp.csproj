@@ -77,14 +77,16 @@
     <Compile Include="Assets\Resources\Scripts\Backend\ContactList\ContactInfo.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\ContactList\GenerateContacts.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\DontDestroyOnLoad.cs" />
+    <Compile Include="Assets\Resources\Scripts\Backend\General\IsLoaded.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\LikeButton.cs" />
-    <Compile Include="Assets\Resources\Scripts\Backend\General\LoadData.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\PausePlayTrack.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\PlayerData.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\SaveData.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\General\SaveSystem.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\Messenger\SaveAndUpdateMessages.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\Profile\LoadPostsContent.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ink\InkTestingScript.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ink\Reset.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadContacts.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadMessenger.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\General\ChangeScene.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\BioManager.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\CreateMessageContainer.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\GenerateMessage.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Room\ShowText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

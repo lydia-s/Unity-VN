@@ -9,10 +9,15 @@ public class Clock : MonoBehaviour
 {
     public float timeStart = 1020;
     public TextMeshProUGUI clock;
+    public static bool IsLoaded = false;
     // Start is called before the first frame update
     void Start()
     {
         clock.text = timeStart.ToString();
+        if (IsLoaded == true) {
+            PlayerData data = SaveSystem.LoadData();
+            timeStart = data.time;
+        }
         
     }
 

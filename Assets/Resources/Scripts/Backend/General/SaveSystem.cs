@@ -4,12 +4,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-    public static void SaveData(StatBars stats)
+    public static void SaveData(StatBars stats, Clock clock)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.binary";
         FileStream stream = new FileStream(path, FileMode.Create);
-        PlayerData data = new PlayerData(stats);
+        PlayerData data = new PlayerData(stats, clock);
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -25,6 +25,7 @@ public static class SaveSystem
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
             return data;
+
         }
         else {
             Debug.Log("save file not found in: " + path);

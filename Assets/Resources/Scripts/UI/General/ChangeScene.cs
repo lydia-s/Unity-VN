@@ -9,7 +9,6 @@ public class ChangeScene : MonoBehaviour
     {
         //PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
         //SceneManager.LoadScene("PauseMenu");
-        Debug.Log("Went in");
         Time.timeScale = 0f;
 
     }

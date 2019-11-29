@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SaveData : MonoBehaviour
 {
-    public GameObject saveCode;
+    public GameObject statsBars;
+    public GameObject timeSave;
     public void SaveStats()
     {
-        SaveSystem.SaveData(saveCode.GetComponent<StatBars>());
+        SaveSystem.SaveData(statsBars.GetComponent<StatBars>(), timeSave.GetComponent<Clock>());
     }
 }

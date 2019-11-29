@@ -17,17 +17,13 @@ public class StatBars : MonoBehaviour
     public Slider sanityBar;
     public Slider submissionBar;
     public TextMeshProUGUI percentageProgress;
+    public static bool IsLoaded = false;
     
-    public void LoadStats() {
-        PlayerData data = SaveSystem.LoadData();
-        CurrentSleep = data.sleep;
-        CurrentSanity = data.sanity;
-        CurrentProgress = data.progress;
-    }
- 
+   
     // Start is called before the first frame update
     void Start()
     {
+
         MaxSleep = 20f;
         CurrentSleep = MaxSleep;
         MaxSanity = 20f;
@@ -37,6 +33,13 @@ public class StatBars : MonoBehaviour
         sleepBar.value = CurrentSleep/MaxSleep;
         sanityBar.value = CurrentSanity/MaxSanity;
         submissionBar.value = CurrentProgress;
+        if (IsLoaded == true) {
+            PlayerData data = SaveSystem.LoadData();
+            CurrentSleep = data.sleep;
+            CurrentSanity = data.sanity;
+            CurrentProgress = data.progress;
+        }
+       
 
 
     }
@@ -70,6 +73,7 @@ public class StatBars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         UpdateProgress();
         if (Input.GetKeyDown("space"))
         {
