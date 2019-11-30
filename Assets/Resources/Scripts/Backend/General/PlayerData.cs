@@ -9,7 +9,9 @@ public class PlayerData
     public float sleep;
     public float sanity;
     public float time;
-
+    public List<string> messageHistory1;//in the format: message | sent
+    public List<string> messageHistory2;
+    public List<string> messageHistory3;
 
 
     public PlayerData(StatBars stats, Clock clock)

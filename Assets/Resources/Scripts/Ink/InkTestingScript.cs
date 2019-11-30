@@ -34,9 +34,20 @@ public class InkTestingScript : MonoBehaviour
     {
         EraseUI();
         Text storyText = Instantiate(textPrefab) as Text;
-        storyText.text = LoadStoryChunk();
-        storyText.transform.SetParent(this.transform, false);
 
+        string text = LoadStoryChunk();
+
+        List<string> tags = story.currentTags;
+        string tag = "";
+        if (tags.Count > 0)
+        {
+            tag = tags[0];
+        }
+
+        storyText.text = text;
+        
+        storyText.transform.SetParent(this.transform, false);
+        
         foreach (Choice choice in story.currentChoices)
         {
             
@@ -47,6 +58,7 @@ public class InkTestingScript : MonoBehaviour
             choiceButton.transform.SetParent(this.transform, false);
             choiceButton.onClick.AddListener(delegate {
                 ChooseStoryChoice(choice);
+                gameObject.GetComponent<GenerateMessage>().CreateMessage(storyText.text.Replace("\n", string.Empty), tag);
                 var savedState = story.state.ToJson();
                 PlayerPrefs.SetString("inkSaveState", savedState);
             });
@@ -79,6 +91,7 @@ public class InkTestingScript : MonoBehaviour
         {
             text = story.ContinueMaximally();
         }
+        
         return text;
     }
 }
