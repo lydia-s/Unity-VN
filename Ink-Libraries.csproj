@@ -158,13 +158,13 @@
     <Compile Include="Assets\Plugins\Ink\InkLibs\InkRuntime\VariablesState.cs" />
     <Compile Include="Assets\Plugins\Ink\InkLibs\InkRuntime\Void.cs" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -356,31 +356,31 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Cradle">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Assets/Cradle/Cradle.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Assets/Cradle/Cradle.dll</HintPath>
     </Reference>
     <Reference Include="Cradle.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Assets/Cradle/Editor/Cradle.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Assets/Cradle/Editor/Cradle.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Nustache.Core">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Assets/Cradle/Editor/ThirdParty/Nustache/Nustache.Core.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Assets/Cradle/Editor/ThirdParty/Nustache/Nustache.Core.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V10)/VisualNovel/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

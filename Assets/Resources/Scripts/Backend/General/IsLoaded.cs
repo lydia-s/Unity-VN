@@ -8,9 +8,11 @@ public class IsLoaded : MonoBehaviour
     public void SelectLoad() {
         StatBars.IsLoaded = true;
         Clock.IsLoaded = true;
+        MessageLists.IsLoaded = true;
     }
     public void Unload() {
         StatBars.IsLoaded = false;
         Clock.IsLoaded = false;
+        MessageLists.IsLoaded = false;
     }
 }

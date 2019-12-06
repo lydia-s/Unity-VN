@@ -14,12 +14,14 @@ public class PlayerData
     public List<string> messageHistory3;
 
 
-    public PlayerData(StatBars stats, Clock clock)
+    public PlayerData(StatBars stats, Clock clock, MessageLists messageLists)
     {
         progress = stats.CurrentProgress;
         sleep = stats.CurrentSleep;
         sanity = stats.CurrentSanity;
         time = clock.timeStart;
+        messageHistory1 = messageLists.messageHistory1;
+
 
     }
 

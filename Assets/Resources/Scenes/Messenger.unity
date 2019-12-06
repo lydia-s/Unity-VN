@@ -1019,8 +1019,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 571089078}
-  - component: {fileID: 571089079}
-  - component: {fileID: 571089080}
   m_Layer: 5
   m_Name: Phone
   m_TagString: Untagged
@@ -1050,39 +1048,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 30}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &571089079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571089077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39ac1ff569230a468e61d31b9c045cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  avatarName: {fileID: 346328489}
-  received: {fileID: 3443864474361466957, guid: 237f6bca815fe2e43b6bb75a5c1cb049,
-    type: 3}
-  sent: {fileID: 7024343415280399092, guid: ec29d7f8210278449ae457f93272e683, type: 3}
---- !u!114 &571089080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571089077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06449ebdc94954a4782fd49fba844947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  received: {fileID: 3443864474361466957, guid: 237f6bca815fe2e43b6bb75a5c1cb049,
-    type: 3}
-  sent: {fileID: 7024343415280399092, guid: ec29d7f8210278449ae457f93272e683, type: 3}
-  placeMessage: {fileID: 947531990}
-  savePlace: {fileID: 571089077}
 --- !u!1 &625393816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,8 +1344,9 @@ GameObject:
   - component: {fileID: 891730117}
   - component: {fileID: 891730116}
   - component: {fileID: 891730115}
+  - component: {fileID: 891730119}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1444,7 +1410,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_TargetDisplay: 0
 --- !u!224 &891730118
 RectTransform:
@@ -1466,6 +1432,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &891730119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891730114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06449ebdc94954a4782fd49fba844947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  received: {fileID: 3443864474361466957, guid: 237f6bca815fe2e43b6bb75a5c1cb049,
+    type: 3}
+  sent: {fileID: 7024343415280399092, guid: ec29d7f8210278449ae457f93272e683, type: 3}
+  placeMessage: {fileID: 947531990}
+  savePlace: {fileID: 571089077}
 --- !u!1 &924054312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141.49995, y: 241.50002}
+  m_AnchoredPosition: {x: -141.49997, y: 241.50002}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &947531992
@@ -2518,7 +2501,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1757862889
 RectTransform:
@@ -2555,7 +2538,6 @@ GameObject:
   - component: {fileID: 1808261201}
   - component: {fileID: 1808261200}
   - component: {fileID: 1808261199}
-  - component: {fileID: 1808261204}
   m_Layer: 5
   m_Name: Choices
   m_TagString: Untagged
@@ -2684,23 +2666,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1808261204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808261197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06449ebdc94954a4782fd49fba844947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  received: {fileID: 3443864474361466957, guid: 237f6bca815fe2e43b6bb75a5c1cb049,
-    type: 3}
-  sent: {fileID: 7024343415280399092, guid: ec29d7f8210278449ae457f93272e683, type: 3}
-  placeMessage: {fileID: 947531990}
-  savePlace: {fileID: 571089077}
 --- !u!1 &1859098204
 GameObject:
   m_ObjectHideFlags: 0

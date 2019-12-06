@@ -58,7 +58,10 @@ public class InkTestingScript : MonoBehaviour
             choiceButton.transform.SetParent(this.transform, false);
             choiceButton.onClick.AddListener(delegate {
                 ChooseStoryChoice(choice);
-                gameObject.GetComponent<GenerateMessage>().CreateMessage(storyText.text.Replace("\n", string.Empty), tag);
+                GameObject gameObject = GameObject.Find("Phone");//find object GenerateMessage is attached to
+                gameObject.GetComponent<GenerateMessage>().CreateMessage(storyText.text, tag);//generate text message(box you see on screen)
+                GameObject worldClock = GameObject.Find("WorldClock");
+                worldClock.GetComponent<MessageLists>().SaveMessageToList(storyText.text, tag);//save message to list(for loading later)
                 var savedState = story.state.ToJson();
                 PlayerPrefs.SetString("inkSaveState", savedState);
             });

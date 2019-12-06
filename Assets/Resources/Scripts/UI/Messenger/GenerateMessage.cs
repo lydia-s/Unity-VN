@@ -11,6 +11,12 @@ public class GenerateMessage : MonoBehaviour
     public GameObject placeMessage = null;
     public GameObject savePlace = null;//where the saveandupdatemessages script is attached
 
+    private void Start()
+    {
+        GameObject gameObject = GameObject.Find("WorldClock");
+        gameObject.GetComponent<MessageLists>().LoadMessagesFromList();
+    }
+
     //for loading new messages
     public void CreateMessage(string message, string messageType) {
         if (messageType == "Sent")
@@ -19,21 +25,18 @@ public class GenerateMessage : MonoBehaviour
             msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;
             msg.transform.SetParent(placeMessage.transform, false);
             msg.name = sent.name;
-            savePlace.GetComponent<SaveAndUpdateMessages>().SaveMessageToFile(message, messageType);
         }
         else {
             GameObject msg = Instantiate(received) as GameObject;
             msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;
             msg.transform.SetParent(placeMessage.transform, false);
             msg.name = received.name;
-            savePlace.GetComponent<SaveAndUpdateMessages>().SaveMessageToFile(message, messageType);
         }
         
     }
     //for loading old messages from files
     public void CreateMessage(GameObject messageBoxType, string message)
     {
-        
         GameObject msg = Instantiate(messageBoxType) as GameObject;//instantiate message 
         msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;//set test
         msg.transform.SetParent(placeMessage.transform, false);//set parent

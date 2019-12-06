@@ -8,6 +8,7 @@ public class SaveData : MonoBehaviour
     public GameObject timeSave;
     public void SaveStats()
     {
-        SaveSystem.SaveData(statsBars.GetComponent<StatBars>(), timeSave.GetComponent<Clock>());
+        GameObject gameOb = GameObject.Find("WorldClock");
+        SaveSystem.SaveData(statsBars.GetComponent<StatBars>(), timeSave.GetComponent<Clock>(), gameOb.GetComponent<MessageLists>());
     }
 }
