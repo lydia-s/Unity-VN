@@ -12,6 +12,7 @@ public class PlayerData
     public List<string> messageHistory1;//in the format: message | sent
     public List<string> messageHistory2;
     public List<string> messageHistory3;
+    public Dictionary<string, string> storyPositions = new Dictionary<string, string>();
 
 
     public PlayerData(StatBars stats, Clock clock, MessageLists messageLists)
@@ -21,7 +22,9 @@ public class PlayerData
         sanity = stats.CurrentSanity;
         time = clock.timeStart;
         messageHistory1 = messageLists.messageHistory1;
-
+        messageHistory2 = messageLists.messageHistory2;
+        messageHistory3 = messageLists.messageHistory3;
+        storyPositions = messageLists.storyPositions;
 
     }
 

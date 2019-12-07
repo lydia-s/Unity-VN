@@ -10,11 +10,13 @@ public class GenerateMessage : MonoBehaviour
     public GameObject sent;
     public GameObject placeMessage = null;
     public GameObject savePlace = null;//where the saveandupdatemessages script is attached
+    public TextMeshProUGUI avatarName;
 
     private void Start()
     {
         GameObject gameObject = GameObject.Find("WorldClock");
-        gameObject.GetComponent<MessageLists>().LoadMessagesFromList();
+        string name = avatarName.text;
+        gameObject.GetComponent<MessageLists>().LoadMessagesFromList(name);
     }
 
     //for loading new messages

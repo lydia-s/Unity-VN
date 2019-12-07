@@ -1,14 +1,24 @@
-Hello, world! More text.#Received
-* Choice 1->next_choices#Sent
-* Choice 2->next_choices#Sent
-* Choice 3->next_choices#Sent
+* start_char1
+-> start_char1
+*start_char2
+->start_char2
+*start_char3
+-> start_char3
 
-===next_choices==
-* Well well->next_choices2#Received
-* Not now->next_choices2#Received
+===start_char1==
+* Well well->#Received 
+->END
+* Not now->#Received
+->END
 
-==next_choices2==
+==start_char2==
 * ok #Sent
 -> END
 * No Worries #Sent
+-> END
+
+==start_char3==
+* Hello #Sent
+-> END
+* Hey #Sent
 -> END

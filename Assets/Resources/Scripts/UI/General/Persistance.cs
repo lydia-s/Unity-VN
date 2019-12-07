@@ -25,7 +25,6 @@ public class Persistance : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            Debug.Log("Should destroy");
             Destroy(gameObject);
         }
 

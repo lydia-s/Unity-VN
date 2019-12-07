@@ -1,6 +1,0 @@
-Hello, world! More text.|Sent
-Choice 1|Sent
-Hello, world! More text.|Sent
-Choice 1|Sent
-Hello, world! More text.|Sent
-Choice 3|Sent
