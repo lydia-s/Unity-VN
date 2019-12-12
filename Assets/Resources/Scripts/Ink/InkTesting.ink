@@ -1,8 +1,6 @@
 * start_char1-> start_char1
-*start_char2
-->start_char2
-*start_char3
--> start_char3
+*start_char2->start_char2
+*start_char3-> start_char3
 
 ==start_char1==
 * Well well#Received
@@ -17,13 +15,13 @@ goodbye#Sent
 Somewhat->END
 
 ==start_char2==
-* ok #Sent
--> END
-* No Worries #Sent
--> END
+#Sent
+* ok -> END
+#Sent
+* No Worries-> END
 
 ==start_char3==
-* Hello #Sent
--> END
-* Hey #Sent
--> END
+#Sent
+* Hello-> END
+#Sent
+* Hey-> END

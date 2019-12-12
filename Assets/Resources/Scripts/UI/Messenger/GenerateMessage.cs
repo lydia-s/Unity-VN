@@ -14,13 +14,12 @@ public class GenerateMessage : MonoBehaviour
 
     private void Start()
     {
-        GameObject gameObject = GameObject.Find("WorldClock");
-        string name = avatarName.text;
-        gameObject.GetComponent<MessageLists>().LoadMessagesFromList(name);
+
     }
 
     //for loading new messages
     public void CreateMessage(string message, string messageType) {
+        Debug.Log(message);
         if (messageType == "Sent")
         {
             GameObject msg = Instantiate(sent) as GameObject;

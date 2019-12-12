@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor-firstpass.dll:
+    - Ink.UnityIntegration.DefaultAssetEditor
     - Ink.UnityIntegration.InkLibrary
     - Ink.UnityIntegration.InkSettings
     Assembly-CSharp.dll:
@@ -368,7 +369,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12054}
     - Class: 114
-      Script: {instanceID: 17024}
+      Script: {instanceID: 35582}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1299,7 +1300,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 712e8abd662d21b37c2dfceb9b02eba8
+      Hash: 5b1f86ab9cbfeaccee9b01337792d700
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InkTestingScript

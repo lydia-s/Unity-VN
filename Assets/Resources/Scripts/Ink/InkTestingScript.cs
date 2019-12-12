@@ -16,6 +16,7 @@ public class InkTestingScript : MonoBehaviour
     void Start()
     {
         GameObject worldClock = GameObject.Find("WorldClock");
+        worldClock.GetComponent<MessageLists>().LoadMessagesFromList(avatarName.text);//load messages when you enter
         story = new Story(inkJSON.text);
         if (worldClock.GetComponent<MessageLists>().storyPositions.ContainsKey(avatarName.text))//check contains name
         {
@@ -33,22 +34,30 @@ public class InkTestingScript : MonoBehaviour
     public void ResetState()
     {
         story.ResetState();
-        
     }
 
     public void RefreshUI()
     {
         EraseUI();
         List<string> tags = story.currentTags;//get tags
-        string tag = "";
+        string tag = "";//tag to label message
+        string name = avatarName.text;//name of contact
+        string loadedText = "";//text to post
+        GameObject worldClock = GameObject.Find("WorldClock");//where the MessageLists script is attached
         if (tags.Count > 0)
         {
             tag = tags[0];
         }
-        string name = avatarName.text;//name of contact
+        
+        if (story.canContinue) {
+            loadedText = LoadStoryChunk();//gets a chunk of text before a choice is made
+            PostMessages(loadedText, tag, name);
+            var savedState = story.state.ToJson();
+            worldClock.GetComponent<MessageLists>().SaveStoryState(name, savedState);
+        }
+        
 
-        string loadedText = LoadStoryChunk();//gets a chunk of text before a choice is made
-        GameObject worldClock = GameObject.Find("WorldClock");
+        
         
         foreach (Choice choice in story.currentChoices)
         {
@@ -60,7 +69,6 @@ public class InkTestingScript : MonoBehaviour
             choiceButton.onClick.AddListener(delegate {
                 ChooseStoryChoice(choice);//this method then calls refreshUI
                 var savedState = story.state.ToJson();
-                PostMessages(loadedText, tag, name);
                 worldClock.GetComponent<MessageLists>().SaveStoryState(name, savedState);
             });
         }
@@ -68,6 +76,7 @@ public class InkTestingScript : MonoBehaviour
 
     }
     public void PostMessages(string textBlock, string tag, string name) {
+        
         GameObject worldClock = GameObject.Find("WorldClock");
         string[] messages = textBlock.Split('\n');
         foreach (string message in messages) {
@@ -112,21 +121,16 @@ public class InkTestingScript : MonoBehaviour
         {
             Destroy(this.transform.GetChild(i).gameObject);
         }
-
     }
 
     string LoadStoryChunk()
     {
-        
-
         string text = "";
         if (story.canContinue)
         {
             text = story.ContinueMaximally();
             //generate message here
-            Debug.Log(text);
         }
-        
         return text;
     }
 }
