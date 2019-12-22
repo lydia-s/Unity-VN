@@ -100,6 +100,10 @@
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\BioManager.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\CreateMessageContainer.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\GenerateMessage.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\RadialMenu\Interactable.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\RadialMenu\RadialButton.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\RadialMenu\RadialMenu.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\RadialMenu\RadialMenuSpawner.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Room\ShowText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

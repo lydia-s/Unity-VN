@@ -19,7 +19,6 @@ public class GenerateMessage : MonoBehaviour
 
     //for loading new messages
     public void CreateMessage(string message, string messageType) {
-        Debug.Log(message);
         if (messageType == "Sent")
         {
             GameObject msg = Instantiate(sent) as GameObject;
