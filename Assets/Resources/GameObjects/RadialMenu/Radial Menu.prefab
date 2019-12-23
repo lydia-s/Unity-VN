@@ -208,3 +208,5 @@ MonoBehaviour:
   buttonPrefab: {fileID: 3127908741616243320, guid: 4bb07cef4ffb42f49b1db1a45ed05c26,
     type: 3}
   selected: {fileID: 0}
+  actionObj: {fileID: 7731785437760512378, guid: 0196b48e5c94a784ba6c91ce61530155,
+    type: 3}

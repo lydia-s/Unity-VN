@@ -25,7 +25,7 @@ public class StatBars : MonoBehaviour
     {
 
         MaxSleep = 20f;
-        CurrentSleep = MaxSleep;
+        CurrentSleep = 10f;
         MaxSanity = 20f;
         CurrentSanity = MaxSanity;
         MaxProgress = 20f;
@@ -53,17 +53,28 @@ public class StatBars : MonoBehaviour
         sleepBar.value = CurrentSleep / MaxSleep;
         submissionBar.value = CurrentProgress / MaxProgress;
     }
-    void ReduceSanity(float sanityValue) {
+    public void ReduceSanity(float sanityValue) {
         CurrentSanity -= sanityValue;
         sanityBar.value = CurrentSanity / MaxSanity;
     }
-    void ReduceSleep(float tiredValue)
+    public void ReduceSleep(float tiredValue)
     {
         CurrentSleep -= tiredValue;
         sleepBar.value = CurrentSleep / MaxSleep;
 
     }
-    void IncreaseProgress(float progress)
+    public void IncreaseSleep(float sleepValue)
+    {
+        CurrentSleep += sleepValue;
+        sleepBar.value = CurrentSleep / MaxSleep;
+
+    }
+    public void IncreaseSanity(float sanityValue)
+    {
+        CurrentSanity += sanityValue;
+        sanityBar.value = CurrentSanity / MaxSanity;
+    }
+    public void IncreaseProgress(float progress)
     {
         CurrentProgress += progress;
         submissionBar.value =CurrentProgress/MaxProgress;
@@ -73,16 +84,6 @@ public class StatBars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         UpdateProgress();
-        if (Input.GetKeyDown("space"))
-        {
-            ReduceSleep(1f);
-            ReduceSanity(1f);
-            IncreaseProgress(1f);
-        }
-
-
-
     }
 }
