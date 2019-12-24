@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RadialMenu : MonoBehaviour
 {
@@ -104,6 +105,13 @@ public class RadialMenu : MonoBehaviour
                 PerformAnimation(action);
                 break;
             case "submit":
+                if (statsBars.CurrentProgress == 20f)
+                {
+                    SceneManager.LoadScene("Submit");
+                }
+                else {
+                    Debug.Log("YOU CANNOT SUBMIT!");
+                }
                 break;
             default:
                 break;

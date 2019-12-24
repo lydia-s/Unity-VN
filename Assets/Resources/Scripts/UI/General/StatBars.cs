@@ -54,14 +54,18 @@ public class StatBars : MonoBehaviour
         submissionBar.value = CurrentProgress / MaxProgress;
     }
     public void ReduceSanity(float sanityValue) {
-        CurrentSanity -= sanityValue;
-        sanityBar.value = CurrentSanity / MaxSanity;
+        if (CurrentSanity>0f) {
+            CurrentSanity -= sanityValue;
+            sanityBar.value = CurrentSanity / MaxSanity;
+        }
+        
     }
     public void ReduceSleep(float tiredValue)
     {
-        CurrentSleep -= tiredValue;
-        sleepBar.value = CurrentSleep / MaxSleep;
-
+        if (CurrentSleep>0f) {
+            CurrentSleep -= tiredValue;
+            sleepBar.value = CurrentSleep / MaxSleep;
+        }
     }
     public void IncreaseSleep(float sleepValue)
     {
