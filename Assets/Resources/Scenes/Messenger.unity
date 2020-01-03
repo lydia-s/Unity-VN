@@ -1501,7 +1501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141.49995, y: 241.50002}
+  m_AnchoredPosition: {x: -141.49998, y: 241.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &947531992
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 137083041}
   m_HandleRect: {fileID: 137083040}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.5
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2560,8 +2560,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 5c0c1020d3ad4094d9552008e05c9dc8, type: 3}
-  textPrefab: {fileID: 8162550952275050469, guid: 88ee52f7b69dca940a4b552bb5506420,
-    type: 3}
   buttonPrefab: {fileID: 5650481736182553247, guid: 497f4987735bdbc46857713186dce31a,
     type: 3}
   avatarName: {fileID: 346328489}
@@ -2870,6 +2868,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avatar
       objectReference: {fileID: 0}
+    - target: {fileID: 5073014497225214615, guid: 65f40c8b1b521e74bbed03a6da425a74,
+        type: 3}
+      propertyPath: m_Name
+      value: ViewBio
+      objectReference: {fileID: 0}
     - target: {fileID: 5073014498677026170, guid: 65f40c8b1b521e74bbed03a6da425a74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2974,11 +2977,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5073014497225214615, guid: 65f40c8b1b521e74bbed03a6da425a74,
-        type: 3}
-      propertyPath: m_Name
-      value: ViewBio
       objectReference: {fileID: 0}
     - target: {fileID: 5073014497225214617, guid: 65f40c8b1b521e74bbed03a6da425a74,
         type: 3}

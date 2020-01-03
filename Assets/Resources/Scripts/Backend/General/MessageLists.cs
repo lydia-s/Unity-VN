@@ -11,6 +11,7 @@ public class MessageLists : MonoBehaviour
     public List<string> messageHistory1;//in the format: message | sent
     public List<string> messageHistory2;
     public List<string> messageHistory3;
+    public string playerName = "";
     public Dictionary<string, string> storyPositions = new Dictionary<string, string>();//string name, string saveState
     public static bool IsLoaded = false;
 
@@ -23,6 +24,7 @@ public class MessageLists : MonoBehaviour
             messageHistory2 = data.messageHistory2;
             messageHistory3 = data.messageHistory3;
             storyPositions = data.storyPositions;
+            playerName = data.playerName;
         }
     }
     public void SaveStoryState(string name, string storyState) {

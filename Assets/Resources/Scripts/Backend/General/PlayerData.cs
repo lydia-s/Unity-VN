@@ -9,6 +9,7 @@ public class PlayerData
     public float sleep;
     public float sanity;
     public float time;
+    public int dayNum;
     public List<string> messageHistory1;//in the format: message | sent
     public List<string> messageHistory2;
     public List<string> messageHistory3;
@@ -22,10 +23,12 @@ public class PlayerData
         sleep = stats.CurrentSleep;
         sanity = stats.CurrentSanity;
         time = clock.timeStart;
+        dayNum = clock.dayNum;
         messageHistory1 = messageLists.messageHistory1;
         messageHistory2 = messageLists.messageHistory2;
         messageHistory3 = messageLists.messageHistory3;
         storyPositions = messageLists.storyPositions;
+        playerName = messageLists.playerName;
         
 
     }

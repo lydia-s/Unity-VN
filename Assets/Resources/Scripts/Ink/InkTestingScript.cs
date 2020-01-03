@@ -21,7 +21,8 @@ public class InkTestingScript : MonoBehaviour
         GameObject worldClock = GameObject.Find("WorldClock");
         worldClock.GetComponent<MessageLists>().LoadMessagesFromList(avatarName.text);//load messages when you enter
         story = new Story(inkJSON.text);
-        story.variablesState["player_name"] = playerName;
+        story.variablesState["player_name"] = playerName;//set player name
+        worldClock.GetComponent<MessageLists>().playerName = playerName;
         if (worldClock.GetComponent<MessageLists>().storyPositions.ContainsKey(avatarName.text))//check contains name
         {
             var savedState = worldClock.GetComponent<MessageLists>().storyPositions[avatarName.text];//retrieve story state using key
@@ -67,9 +68,6 @@ public class InkTestingScript : MonoBehaviour
             worldClock.GetComponent<MessageLists>().SaveStoryState(name, savedState);
 
         }
-        
-
-        
         
         foreach (Choice choice in story.currentChoices)
         {
@@ -133,6 +131,9 @@ public class InkTestingScript : MonoBehaviour
         }
     }
 
+    /*
+     * Load a line of the story
+     */
     string LoadStoryChunk()
     {
         string text = "";
