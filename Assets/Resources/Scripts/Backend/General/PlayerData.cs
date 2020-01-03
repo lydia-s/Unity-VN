@@ -13,6 +13,7 @@ public class PlayerData
     public List<string> messageHistory2;
     public List<string> messageHistory3;
     public Dictionary<string, string> storyPositions = new Dictionary<string, string>();
+    public string playerName;
 
 
     public PlayerData(StatBars stats, Clock clock, MessageLists messageLists)
@@ -25,6 +26,7 @@ public class PlayerData
         messageHistory2 = messageLists.messageHistory2;
         messageHistory3 = messageLists.messageHistory3;
         storyPositions = messageLists.storyPositions;
+        
 
     }
 

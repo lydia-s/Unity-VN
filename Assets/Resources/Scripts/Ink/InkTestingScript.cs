@@ -11,13 +11,17 @@ public class InkTestingScript : MonoBehaviour
     private Story story;
     public Button buttonPrefab;
     public TextMeshProUGUI avatarName;
+    public static string playerName = "";
+
 
     // Start is called before the first frame update
     void Start()
     {
+
         GameObject worldClock = GameObject.Find("WorldClock");
         worldClock.GetComponent<MessageLists>().LoadMessagesFromList(avatarName.text);//load messages when you enter
         story = new Story(inkJSON.text);
+        story.variablesState["player_name"] = playerName;
         if (worldClock.GetComponent<MessageLists>().storyPositions.ContainsKey(avatarName.text))//check contains name
         {
             var savedState = worldClock.GetComponent<MessageLists>().storyPositions[avatarName.text];//retrieve story state using key
@@ -31,6 +35,7 @@ public class InkTestingScript : MonoBehaviour
         
 
     }
+    
     public void ResetState()
     {
         story.ResetState();
@@ -44,16 +49,23 @@ public class InkTestingScript : MonoBehaviour
         string name = avatarName.text;//name of contact
         string loadedText = "";//text to post
         GameObject worldClock = GameObject.Find("WorldClock");//where the MessageLists script is attached
-        if (tags.Count > 0)
-        {
-            tag = tags[0];
-        }
-        
-        if (story.canContinue) {
-            loadedText = LoadStoryChunk();//gets a chunk of text before a choice is made
-            PostMessages(loadedText, tag, name);
+        while (story.canContinue) {//while the story can continue
+            loadedText = LoadStoryChunk();//gets a line of text
+            tags = story.currentTags;//refresh tags
+            if (tags.Count > 0)
+            {
+                tag = tags[0];//set tag to current tag
+            }
+            string[] messages = loadedText.Split('\n');
+            foreach (string s in messages) {
+                if (s!="") {
+                    PostMessage(s, tag, name);
+                }
+                
+            }
             var savedState = story.state.ToJson();
             worldClock.GetComponent<MessageLists>().SaveStoryState(name, savedState);
+
         }
         
 
@@ -75,14 +87,12 @@ public class InkTestingScript : MonoBehaviour
 
 
     }
-    public void PostMessages(string textBlock, string tag, string name) {
+    public void PostMessage(string message, string tag, string name) {
         
         GameObject worldClock = GameObject.Find("WorldClock");
-        string[] messages = textBlock.Split('\n');
-        foreach (string message in messages) {
-            gameObject.GetComponent<GenerateMessage>().CreateMessage(message, tag);//generate text message(box you see on screen)
-            worldClock.GetComponent<MessageLists>().SaveMessageToList(message, tag, name);//save message to list(for loading later)
-        }
+        gameObject.GetComponent<GenerateMessage>().CreateMessage(message, tag);//generate text message(box you see on screen)
+        worldClock.GetComponent<MessageLists>().SaveMessageToList(message, tag, name);//save message to list(for loading later)
+        
 
     }
     /**When we start before the player has made any decisions the first set of choices will be chosen
@@ -126,11 +136,7 @@ public class InkTestingScript : MonoBehaviour
     string LoadStoryChunk()
     {
         string text = "";
-        if (story.canContinue)
-        {
-            text = story.ContinueMaximally();
-            //generate message here
-        }
+        text = story.Continue();
         return text;
     }
 }

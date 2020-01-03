@@ -1,27 +1,31 @@
-* start_char1-> start_char1
-*start_char2->start_char2
-*start_char3-> start_char3
+VAR lied_for_fried = false
+VAR player_name = "Lydia"
+* Hi {player_name}, how is the report coming along?#Received
+-> start_char1
+*I need to talk to you about something#Received
+->start_char2
+*Hey {player_name}, going out tonight?#Received
+->start_char3
 
 ==start_char1==
-* Well well#Received
-What have we here?
-Something->char1_hello
-* Not now#Received
+* A little behind#Sent
+-> END
+*Nearly there#Sent
 ->END
 
-==char1_hello==
-*hello
-goodbye#Sent
-Somewhat->END
-
 ==start_char2==
-#Sent
-* ok -> END
-#Sent
-* No Worries-> END
+* I haven't got time#Sent 
+-> END
+* What's up?#Sent
+-> END
 
 ==start_char3==
-#Sent
-* Hello-> END
-#Sent
-* Hey-> END
+* No#Sent
+->awkward_char3
+* I am not and neither should you#Sent
+->awkward_char3
+* What the hell is wrong with you?!#Sent
+->awkward_char3
+==awkward_char3==
+You need to chill#Received 
+->END

@@ -87,6 +87,7 @@
     <Compile Include="Assets\Resources\Scripts\Backend\Messenger\SaveAndUpdateMessages.cs" />
     <Compile Include="Assets\Resources\Scripts\Backend\Profile\LoadPostsContent.cs" />
     <Compile Include="Assets\Resources\Scripts\Ink\InkTestingScript.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ink\PlayerName.cs" />
     <Compile Include="Assets\Resources\Scripts\Ink\Reset.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadContacts.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\ContactList\LoadMessenger.cs" />
