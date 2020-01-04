@@ -83,7 +83,7 @@ public class MessageLists : MonoBehaviour
         foreach (string message in listName)
         {
             string[] splitMessage = message.Split('|');
-            choices.GetComponentInChildren<GenerateMessage>().CreateMessage(splitMessage[0], splitMessage[1]);
+            choices.GetComponentInChildren<GenerateMessage>().LoadOldMessages(splitMessage[0], splitMessage[1]);
         }
     }
    

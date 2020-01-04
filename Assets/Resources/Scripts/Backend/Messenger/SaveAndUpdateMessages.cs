@@ -57,12 +57,12 @@ public class SaveAndUpdateMessages : MonoBehaviour
             if (message[1] == "Received")
             {
                 
-                gameObject.GetComponent<GenerateMessage>().CreateMessage(received,message[0]);
+                gameObject.GetComponent<GenerateMessage>().CreateMessage(received,message[0]);//load old message
             }
             else
             {
                 
-                gameObject.GetComponent<GenerateMessage>().CreateMessage(sent, message[0]);
+                gameObject.GetComponent<GenerateMessage>().CreateMessage(sent, message[0]);//load old message
             }
         }
         inp_stm.Close();

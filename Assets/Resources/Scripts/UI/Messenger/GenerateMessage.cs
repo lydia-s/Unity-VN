@@ -11,11 +11,78 @@ public class GenerateMessage : MonoBehaviour
     public GameObject placeMessage = null;
     public GameObject savePlace = null;//where the saveandupdatemessages script is attached
     public TextMeshProUGUI avatarName;
+    float waitTime = 3f;
 
     private void Start()
     {
 
     }
+    IEnumerator WaitForReply(string message)
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        //yield return new WaitForSecondsRealtime(1.5f);
+        GameObject ellipsis = CreateEllipsis();
+        float wait = waitTime;
+        while (wait>0) {
+            ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "";
+            yield return new WaitForSecondsRealtime(1f);
+            ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = ".";
+            yield return new WaitForSecondsRealtime(1f);
+            ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "..";
+            yield return new WaitForSecondsRealtime(1f);
+            ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "...";
+            yield return new WaitForSecondsRealtime(1f);
+            wait--;
+        }
+
+
+         DestroyEllipsis(ellipsis);
+         GameObject msg = Instantiate(received) as GameObject;
+         msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;
+         msg.transform.SetParent(placeMessage.transform, false);
+         msg.name = received.name;
+
+        yield return null;
+
+
+    }
+    public GameObject CreateEllipsis() {
+        GameObject msg = Instantiate(received) as GameObject;
+        msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "...";
+        msg.transform.SetParent(placeMessage.transform, false);
+        msg.name = received.name;
+        return msg;
+    }
+
+    IEnumerator AnimateEllipsis(GameObject ellipsis) {
+        string dots = ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text;
+
+        Debug.Log(dots);
+        if (ellipsis==null) {
+                yield break;
+            }
+
+            if (dots.Length >= 3)
+            {
+                dots = "";
+                ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = dots;
+            }
+            else
+            {
+                dots.Insert(0, ".");
+                ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = dots;
+            }
+
+            yield return new WaitForSecondsRealtime(1f);
+        
+
+    }
+    public void DestroyEllipsis(GameObject ellipsis) {
+        Destroy(ellipsis);
+    }
+
+
+    
 
     //for loading new messages
     public void CreateMessage(string message, string messageType) {
@@ -27,14 +94,35 @@ public class GenerateMessage : MonoBehaviour
             msg.name = sent.name;
         }
         else {
+
+            StartCoroutine(WaitForReply(message));
+
+        }
+        
+    }
+
+    public void LoadOldMessages(string message, string messageType) {
+        if (messageType == "Sent")
+        {
+            GameObject msg = Instantiate(sent) as GameObject;
+            msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;
+            msg.transform.SetParent(placeMessage.transform, false);
+            msg.name = sent.name;
+        }
+        else
+        {
+
             GameObject msg = Instantiate(received) as GameObject;
             msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;
             msg.transform.SetParent(placeMessage.transform, false);
             msg.name = received.name;
+
         }
-        
+
     }
-    //for loading old messages from files
+
+    //for loading old messages from files ***OLD used in SaveAndUpdateMessages***
+
     public void CreateMessage(GameObject messageBoxType, string message)
     {
         GameObject msg = Instantiate(messageBoxType) as GameObject;//instantiate message 
