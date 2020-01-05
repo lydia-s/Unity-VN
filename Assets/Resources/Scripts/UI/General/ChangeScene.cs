@@ -5,6 +5,7 @@ using TMPro;
 
 public class ChangeScene : MonoBehaviour
 {
+    public GameObject saveAnim;
     public void LoadGameMenu()
     {
         //PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
@@ -13,10 +14,24 @@ public class ChangeScene : MonoBehaviour
 
     }
 
+
+    void SaveAnimation()
+    {
+        GameObject x = Instantiate(saveAnim, new Vector2(842, -477), Quaternion.identity);
+        x.transform.SetParent(GameObject.Find("Panel").transform, false);
+        x.name = "Saved";
+        Destroy(x, x.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+    }
+
     public void ResumeGame() {
         //string scene = PlayerPrefs.GetString("lastLoadedScene");
         //SceneManager.LoadScene(scene);
         Time.timeScale = 1f;
+        if (SaveData.gameWasJustSaved)
+        {
+            SaveAnimation();
+            SaveData.gameWasJustSaved = false;
+        }
     }
     public void LoadContacts()
     {

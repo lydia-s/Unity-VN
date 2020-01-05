@@ -98,6 +98,7 @@
     <Compile Include="Assets\Resources\Scripts\UI\General\Persistance.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\General\ResizeTextBox.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\General\StatBars.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\MainMenu\GameLoader.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\BioManager.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\CreateMessageContainer.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\GenerateMessage.cs" />

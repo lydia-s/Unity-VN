@@ -3,7 +3,11 @@ guid: 81a60c91d7f23b64ca9534df3a4c33cd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - statsBars: {instanceID: 0}
+  - timeSave: {instanceID: 0}
+  - saveAnim: {fileID: 7744005513828934773, guid: 6b1eae952a488a64fabb2e86adb74cd4,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

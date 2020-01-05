@@ -20,18 +20,19 @@ public class GenerateMessage : MonoBehaviour
     IEnumerator WaitForReply(string message)
     {
         yield return new WaitForSecondsRealtime(1f);
+        float betweenDotsTime = 0.5f;
         //yield return new WaitForSecondsRealtime(1.5f);
         GameObject ellipsis = CreateEllipsis();
         float wait = waitTime;
         while (wait>0) {
             ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "";
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(betweenDotsTime);
             ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = ".";
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(betweenDotsTime);
             ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "..";
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(betweenDotsTime);
             ellipsis.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "...";
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(betweenDotsTime);
             wait--;
         }
 

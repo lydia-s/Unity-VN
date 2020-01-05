@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f4f2c73dbfa3145be1db31388b0033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveAnim: {fileID: 0}
 --- !u!114 &44989644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,12 +351,12 @@ GameObject:
   - component: {fileID: 76806270}
   - component: {fileID: 76806269}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Enter name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &76806268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2645,6 +2646,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f4f2c73dbfa3145be1db31388b0033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveAnim: {fileID: 7744005513828934773, guid: 6b1eae952a488a64fabb2e86adb74cd4,
+    type: 3}
 --- !u!114 &1182574139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3971,6 +3974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f4f2c73dbfa3145be1db31388b0033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveAnim: {fileID: 0}
 --- !u!114 &1735233997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5166,6 +5170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f4f2c73dbfa3145be1db31388b0033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveAnim: {fileID: 0}
 --- !u!114 &2100978987
 MonoBehaviour:
   m_ObjectHideFlags: 0
