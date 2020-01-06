@@ -9,12 +9,15 @@ public class StatBars : MonoBehaviour
 {
     public float CurrentSleep { get; set; }
     public float MaxSleep { get; set; }
+    public float CurrentSpirit { get; set; }
+    public float MaxSpirit { get; set; }
     public float CurrentSanity { get; set; }
     public float MaxSanity { get; set; }
     public float CurrentProgress { get; set; }
     public float MaxProgress { get; set; }
     public Slider sleepBar;
     public Slider sanityBar;
+    public Slider teamSpiritBar;
     public Slider submissionBar;
     public TextMeshProUGUI percentageProgress;
     public static bool IsLoaded = false;
@@ -23,7 +26,8 @@ public class StatBars : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        CurrentSpirit = 10f;
+        MaxSpirit = 20f;
         MaxSleep = 20f;
         CurrentSleep = 10f;
         MaxSanity = 20f;
@@ -32,11 +36,13 @@ public class StatBars : MonoBehaviour
         CurrentProgress = 0f;
         sleepBar.value = CurrentSleep/MaxSleep;
         sanityBar.value = CurrentSanity/MaxSanity;
+        teamSpiritBar.value = CurrentSpirit / MaxSpirit;
         submissionBar.value = CurrentProgress;
         if (IsLoaded == true) {
             PlayerData data = SaveSystem.LoadData();
             CurrentSleep = data.sleep;
             CurrentSanity = data.sanity;
+            CurrentSpirit = data.spirit;
             CurrentProgress = data.progress;
         }
        
@@ -52,6 +58,7 @@ public class StatBars : MonoBehaviour
         sanityBar.value = CurrentSanity / MaxSanity;
         sleepBar.value = CurrentSleep / MaxSleep;
         submissionBar.value = CurrentProgress / MaxProgress;
+        teamSpiritBar.value = CurrentSpirit / MaxSpirit;
     }
     public void ReduceSanity(float sanityValue) {
         if (CurrentSanity>0f) {
@@ -66,6 +73,20 @@ public class StatBars : MonoBehaviour
             CurrentSleep -= tiredValue;
             sleepBar.value = CurrentSleep / MaxSleep;
         }
+    }
+    public void ReduceSpirit(float spiritValue)
+    {
+        if (CurrentSpirit > 0f)
+        {
+            CurrentSpirit -= spiritValue;
+            teamSpiritBar.value = CurrentSpirit / MaxSpirit;
+        }
+    }
+    public void IncreaseSpirit(float spiritValue)
+    {
+        CurrentSpirit += spiritValue;
+        teamSpiritBar.value = CurrentSpirit / MaxSpirit;
+        
     }
     public void IncreaseSleep(float sleepValue)
     {

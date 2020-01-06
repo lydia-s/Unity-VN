@@ -157,14 +157,14 @@
     <Compile Include="Assets\Plugins\Ink\InkLibs\InkRuntime\VariableReference.cs" />
     <Compile Include="Assets\Plugins\Ink\InkLibs\InkRuntime\VariablesState.cs" />
     <Compile Include="Assets\Plugins\Ink\InkLibs\InkRuntime\Void.cs" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

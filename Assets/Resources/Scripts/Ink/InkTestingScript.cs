@@ -28,12 +28,15 @@ public class InkTestingScript : MonoBehaviour
             var savedState = worldClock.GetComponent<MessageLists>().storyPositions[avatarName.text];//retrieve story state using key
 
             story.state.LoadJson(savedState);
+
         }
         else {
             FirstPaths(avatarName.text);
         }
-        RefreshUI();
         
+        StartCoroutine(RefreshUI());
+
+
 
     }
     
@@ -42,7 +45,7 @@ public class InkTestingScript : MonoBehaviour
         story.ResetState();
     }
 
-    public void RefreshUI()
+    public IEnumerator RefreshUI()
     {
         EraseUI();
         List<string> tags = story.currentTags;//get tags
@@ -50,6 +53,10 @@ public class InkTestingScript : MonoBehaviour
         string name = avatarName.text;//name of contact
         string loadedText = "";//text to post
         GameObject worldClock = GameObject.Find("WorldClock");//where the MessageLists script is attached
+        if (!story.canContinue) {//this is in case you leave the scene without making a choice, you will have the same choices displayed when you return
+            DisplayChoices();
+            yield break;
+        }
         while (story.canContinue) {//while the story can continue
             loadedText = LoadStoryChunk();//gets a line of text
             tags = story.currentTags;//refresh tags
@@ -66,12 +73,21 @@ public class InkTestingScript : MonoBehaviour
             }
             var savedState = story.state.ToJson();
             worldClock.GetComponent<MessageLists>().SaveStoryState(name, savedState);
-
-        }
+        } 
+        yield return new WaitUntil(()=>GenerateMessage.posted);
+        GenerateMessage.posted = false;
+        DisplayChoices();
         
+        
+
+
+    }
+
+    public void DisplayChoices() {
+        GameObject worldClock = GameObject.Find("WorldClock");//where the MessageLists script is attached
         foreach (Choice choice in story.currentChoices)
         {
-            
+
             Button choiceButton = Instantiate(buttonPrefab) as Button;
             Text choiceText = choiceButton.GetComponentInChildren<Text>();
             choiceText.text = choice.text;
@@ -82,8 +98,6 @@ public class InkTestingScript : MonoBehaviour
                 worldClock.GetComponent<MessageLists>().SaveStoryState(name, savedState);
             });
         }
-
-
     }
     public void PostMessage(string message, string tag, string name) {
         
@@ -120,7 +134,7 @@ public class InkTestingScript : MonoBehaviour
     void ChooseStoryChoice(Choice choice)
     {
         story.ChooseChoiceIndex(choice.index);
-        RefreshUI();
+        StartCoroutine(RefreshUI());
     }
 
     void EraseUI()

@@ -11,7 +11,8 @@ public class GenerateMessage : MonoBehaviour
     public GameObject placeMessage = null;
     public GameObject savePlace = null;//where the saveandupdatemessages script is attached
     public TextMeshProUGUI avatarName;
-    float waitTime = 3f;
+    float waitTime = 2f;
+    public static bool posted = false;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class GenerateMessage : MonoBehaviour
     IEnumerator WaitForReply(string message)
     {
         yield return new WaitForSecondsRealtime(1f);
-        float betweenDotsTime = 0.5f;
+        float betweenDotsTime = 0.4f;
         //yield return new WaitForSecondsRealtime(1.5f);
         GameObject ellipsis = CreateEllipsis();
         float wait = waitTime;
@@ -42,6 +43,7 @@ public class GenerateMessage : MonoBehaviour
          msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;
          msg.transform.SetParent(placeMessage.transform, false);
          msg.name = received.name;
+         posted = true;
 
         yield return null;
 
@@ -81,9 +83,6 @@ public class GenerateMessage : MonoBehaviour
     public void DestroyEllipsis(GameObject ellipsis) {
         Destroy(ellipsis);
     }
-
-
-    
 
     //for loading new messages
     public void CreateMessage(string message, string messageType) {

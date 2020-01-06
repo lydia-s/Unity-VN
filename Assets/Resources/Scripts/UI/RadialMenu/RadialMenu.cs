@@ -65,11 +65,13 @@ public class RadialMenu : MonoBehaviour
             case "sleep":
                 //perhaps it returns you to fully rested state
                 statsBars.IncreaseSleep(1.0f);
+                statsBars.ReduceSpirit(2.0f);
                 clock.timeStart += 60f;
                 PerformAnimation(action);
                 break;
             case "nap":
                 statsBars.IncreaseSleep(0.5f);
+                statsBars.IncreaseSpirit(2.0f);
                 clock.timeStart += 30f;
                 PerformAnimation(action);
                 break;
