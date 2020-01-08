@@ -5,13 +5,13 @@ using TMPro;
 
 public class ChangeScene : MonoBehaviour
 {
+    /*
+     * ChangeScene script contains methods for switching different scenes
+     */
     public GameObject saveAnim;
-    public void LoadGameMenu()
+    public void StartPaused()
     {
-        //PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene("PauseMenu");
         Time.timeScale = 0f;
-
     }
 
 
@@ -24,8 +24,7 @@ public class ChangeScene : MonoBehaviour
     }
 
     public void ResumeGame() {
-        //string scene = PlayerPrefs.GetString("lastLoadedScene");
-        //SceneManager.LoadScene(scene);
+        Debug.Log("Un-paused game");
         Time.timeScale = 1f;
         if (SaveData.gameWasJustSaved)
         {

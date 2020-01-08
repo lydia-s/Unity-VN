@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class RadialMenu : MonoBehaviour
 {
+    /*
+     * RadialMenu spawns all the buttons and animates them
+     */
     public TextMeshProUGUI label;
     public RadialButton buttonPrefab;
     public RadialButton selected;

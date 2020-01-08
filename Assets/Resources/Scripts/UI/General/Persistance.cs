@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Persistance : MonoBehaviour
 {
+    /*
+     * This class is to keep game objects when scenes change
+     */
     public static Persistance instance;
     
     private void Awake()

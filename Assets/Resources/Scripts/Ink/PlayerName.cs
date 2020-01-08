@@ -8,32 +8,33 @@ using System.Text.RegularExpressions;
 
 public class PlayerName : MonoBehaviour
 {
+    /*
+     * When loading the room scene, if it is a new game this script will enable the name entry panel
+     * This is so a player can input their name
+     */
     public TextMeshProUGUI nameInput;
     public TMP_InputField inputField;
     public GameObject panel;
-    // Start is called before the first frame update
     void Start()
     {
         inputField.characterLimit = 12;
-    }
-    private void Update()
-    {
-        if (MessageLists.IsLoaded == false) {
-            Time.timeScale = 0f;
-
-            if (Input.GetKeyDown("return") && Regex.IsMatch(nameInput.text, @"[a-zA-Z]"))//has to contain at least one character
-            {
-                InkTestingScript.playerName = nameInput.text;
-                panel.SetActive(false);
-                Time.timeScale = 1f;
-                enabled = false;
-            }
-
+        if (MessageLists.IsLoaded == false)
+        {
+            StartCoroutine(CheckName());
         }
-        if (MessageLists.IsLoaded == true) {
+        else
+        {
             panel.SetActive(false);
         }
 
+    }
+
+    IEnumerator CheckName()
+    {
+        yield return new WaitUntil(()=> Input.GetKeyDown("return") && Regex.IsMatch(nameInput.text, @"[a-zA-Z]"));
+        InkTestingScript.playerName = nameInput.text;
+        panel.SetActive(false);
+        Time.timeScale = 1f;
     }
 
 

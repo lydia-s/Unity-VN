@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 
 public class StatBars : MonoBehaviour
 {
+    /*
+     * StatsBars manages the in game progress metres and loads any previously saved data on start
+     */
     public float CurrentSleep { get; set; }
     public float MaxSleep { get; set; }
     public float CurrentSpirit { get; set; }
