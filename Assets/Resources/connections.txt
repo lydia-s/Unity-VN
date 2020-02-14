@@ -1,2 +1,3 @@
 space=ship-prefix,star-containing,enter-keys,shuttle-prefix,moon-containing,delete-keys
 french=bulldog-prefix,press-prefix,toast-prefix,spanish-countries,english-countries,italian-countries
+house=green-prefix,round-prefix,office-places,museum-places,park-places

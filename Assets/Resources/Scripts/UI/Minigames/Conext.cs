@@ -27,8 +27,9 @@ public class Conext : MonoBehaviour
     public Dictionary<string, Dictionary<string, string>> words = new Dictionary<string, Dictionary<string, string>>();
     public TextMeshProUGUI displayedWord;
     public TextMeshProUGUI startWord;
-    Button relevant;
-    Button irrelevant;
+    public Button relevant;
+    public Button irrelevant;
+    public bool selected = false;
     //dictionary words
     //string relation
     //int lives
@@ -39,6 +40,7 @@ public class Conext : MonoBehaviour
     {
         ReadInDictionary();
         StartCoroutine(ConextStart());
+      
     }
 
     // Update is called once per frame
@@ -46,6 +48,17 @@ public class Conext : MonoBehaviour
     {
         
     }
+    public void IsSelected() {
+        if (selected)
+        {
+            selected = false;
+        }
+        else
+        {
+            selected = true;
+        }
+    }
+
     public void ReadInDictionary() {
 
         string path = "Assets/Resources/connections.txt";
@@ -65,10 +78,6 @@ public class Conext : MonoBehaviour
             relations.Add(relation);
             
         }
-
-        
-
-
         whole.Close();
         //read in text as string
         //split first word separated by - -
@@ -79,16 +88,20 @@ public class Conext : MonoBehaviour
     public IEnumerator ConextStart() {
         System.Random rand = new System.Random();
         int r = rand.Next(0,words.Count);
-        string currentWord = relations[r];
+        string currentWord = relations[r];//the word we are finding connections for
         Dictionary<string, string> tempDict = words[currentWord];
+        List<string> secrets = new List<string>();
+        
+        foreach (string s in tempDict.Values) {
+            secrets.Add(s);
+        }
+        string secretConection = secrets[r];
         startWord.text = currentWord;
         foreach (string s in tempDict.Keys) {
             displayedWord.text = s;
-            yield return new WaitUntil(()=>Input.anyKeyDown);
-            
+            yield return new WaitUntil(()=>selected);
+            IsSelected();
         }
-        yield return null;
-
 
     }
 }
