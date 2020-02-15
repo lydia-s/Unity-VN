@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 /**
  * This class should read in a text file and convert it into a dictionary 
  * [space => {[ship=>prefix],[star=>containing],[enter=>keys]}
@@ -15,21 +16,21 @@ using UnityEngine.UI;
  * If true nothing happens, if false they lose a life
  * Remove word from dictionary
  * Continue until dictionary is empty. Add one to round tally(only 3 rounds should be done)
- * Add lives to points(so 2 lives remaining = 2 points) and refresh lives, so give them 3 more
  */
 
 public class Conext : MonoBehaviour
 {
     public string relation = "";
     public List<string> relations = new List<string>();
-    public int lives = 3;
-    public static int points = 0;
+    public int points = 0;
     public Dictionary<string, Dictionary<string, string>> words = new Dictionary<string, Dictionary<string, string>>();
     public TextMeshProUGUI displayedWord;
     public TextMeshProUGUI startWord;
+    public TextMeshProUGUI pointsText;
     public Button relevant;
     public Button irrelevant;
     public bool selected = false;
+    int rounds = 0;
     //dictionary words
     //string relation
     //int lives
@@ -40,7 +41,6 @@ public class Conext : MonoBehaviour
     {
         ReadInDictionary();
         StartCoroutine(ConextStart());
-      
     }
 
     // Update is called once per frame
@@ -86,22 +86,59 @@ public class Conext : MonoBehaviour
     }
 
     public IEnumerator ConextStart() {
+        
         System.Random rand = new System.Random();
         int r = rand.Next(0,words.Count);
         string currentWord = relations[r];//the word we are finding connections for
         Dictionary<string, string> tempDict = words[currentWord];
         List<string> secrets = new List<string>();
-        
+        //Debug.Log("____NEW ROUND_____: " + currentWord);
         foreach (string s in tempDict.Values) {
             secrets.Add(s);
         }
-        string secretConection = secrets[r];
+        System.Random rand1 = new System.Random();
+        int i = rand.Next(0, words.Count);
+        string secretConnection = secrets[i];
         startWord.text = currentWord;
         foreach (string s in tempDict.Keys) {
-            displayedWord.text = s;
+            Debug.Log(secretConnection + "|" + tempDict[s]);
+            displayedWord.text = s;//keys
             yield return new WaitUntil(()=>selected);
             IsSelected();
+            CheckCorrect(tempDict, s, secretConnection);
+            pointsText.text = points.ToString();
+            
+        }
+        rounds++;
+        if (rounds == 3)
+        {
+            SceneManager.LoadScene("Room");
+        }
+        else {
+            StartCoroutine(ConextStart());
+        }
+            
+        
+       
+        
+
+    }
+
+    public void CheckCorrect(Dictionary<string, string> tempDict, string s, string secretConnection) {
+        if (RelevantOrIrrelevant.relevant == false) {
+            if (tempDict[s] == secretConnection) {
+                points--;
+                return;
+            }
         }
 
+        if (RelevantOrIrrelevant.relevant == true) {
+            if (tempDict[s] != secretConnection)
+            {
+                points--;
+                return;
+            }
+        }
+        points++;
     }
 }

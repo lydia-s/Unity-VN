@@ -103,6 +103,7 @@
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\CreateMessageContainer.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Messenger\GenerateMessage.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Minigames\Conext.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Minigames\RelevantOrIrrelevant.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\RadialMenu\Interactable.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\RadialMenu\RadialButton.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\RadialMenu\RadialMenu.cs" />
