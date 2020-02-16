@@ -10,12 +10,14 @@ public class GameLoader : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public TextMeshProUGUI progressTxt;
+    public GameObject cueCards;
     public void LoadLevel(int sceneIndex) {
         StartCoroutine(LoadAsync(sceneIndex));
         
     }
     IEnumerator LoadAsync(int sceneIndex) {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        cueCards.SetActive(false);
         loadingScreen.SetActive(true);
         while (!operation.isDone) {
             float progress = Mathf.Clamp01(operation.progress/0.9f);
