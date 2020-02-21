@@ -31,6 +31,7 @@ public class Conext : MonoBehaviour
     public Button irrelevant;
     public bool selected = false;
     int rounds = 0;
+    public GameObject card;
     //dictionary words
     //string relation
     //int lives
@@ -39,6 +40,7 @@ public class Conext : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        card.GetComponent<Animator>().enabled = false;
         ReadInDictionary();
         StartCoroutine(ConextStart());
     }
@@ -47,6 +49,11 @@ public class Conext : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PlayAnimation() {
+        if (card.GetComponent<Animator>().enabled == false) { card.GetComponent<Animator>().enabled = true; }
+        card.GetComponent<Animator>().Play("Flip", 0);
     }
     public void IsSelected() {
         if (selected)
@@ -86,22 +93,21 @@ public class Conext : MonoBehaviour
     }
 
     public IEnumerator ConextStart() {
-        
+
         System.Random rand = new System.Random();
         int r = rand.Next(0,words.Count);
         string currentWord = relations[r];//the word we are finding connections for
         Dictionary<string, string> tempDict = words[currentWord];
         List<string> secrets = new List<string>();
-        //Debug.Log("____NEW ROUND_____: " + currentWord);
         foreach (string s in tempDict.Values) {
             secrets.Add(s);
         }
         System.Random rand1 = new System.Random();
-        int i = rand.Next(0, words.Count);
+        int i = rand.Next(0, secrets.Count);
         string secretConnection = secrets[i];
         startWord.text = currentWord;
         foreach (string s in tempDict.Keys) {
-            Debug.Log(secretConnection + "|" + tempDict[s]);
+           // Debug.Log(secretConnection + "|" + tempDict[s]);
             displayedWord.text = s;//keys
             yield return new WaitUntil(()=>selected);
             IsSelected();
@@ -115,6 +121,11 @@ public class Conext : MonoBehaviour
             SceneManager.LoadScene("Room");
         }
         else {
+            startWord.text = "";
+            yield return new WaitUntil(() => startWord.text == "");
+            PlayAnimation();
+            int time = card.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length;//get clip length
+            yield return new WaitForSeconds(time);
             StartCoroutine(ConextStart());
         }
             
