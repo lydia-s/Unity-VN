@@ -55,15 +55,11 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -469,7 +465,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12074}
     - Class: 114
-      Script: {instanceID: 17404}
+      Script: {instanceID: 17406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -755,6 +751,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 0f1d4fbf6e162a70489a9bfe0e62e09c
@@ -1544,4 +1552,4 @@ ScriptsOnlyBuild:
   - Assets/Resources/Scenes/Profile.unity
   - Assets/Resources/Scenes/Submit.unity
   - Assets/Resources/Scenes/Conext.unity
-  playerPath: C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V11)/VisualNovel/Playtest/VisualNovel.exe
+  playerPath: C:/Users/Savoullis/Documents/UnityProjects/VisualNovel/VisualNovel(V12)/VisualNovel/Playtest/VisualNovel.exe

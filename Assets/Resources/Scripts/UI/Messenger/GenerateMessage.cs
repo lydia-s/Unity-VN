@@ -13,7 +13,6 @@ public class GenerateMessage : MonoBehaviour
     public TextMeshProUGUI avatarName;
     float waitTime = 2f;
     public static bool posted = false;
-
     private void Start()
     {
 
@@ -21,7 +20,7 @@ public class GenerateMessage : MonoBehaviour
     IEnumerator WaitForReply(string message)
     {
         yield return new WaitForSecondsRealtime(1f);
-        float betweenDotsTime = 0.4f;
+        float betweenDotsTime = 0.3f;
         //yield return new WaitForSecondsRealtime(1.5f);
         GameObject ellipsis = CreateEllipsis();
         float wait = waitTime;
@@ -37,15 +36,14 @@ public class GenerateMessage : MonoBehaviour
             wait--;
         }
 
-
+         yield return new WaitForSecondsRealtime(betweenDotsTime);
          DestroyEllipsis(ellipsis);
          GameObject msg = Instantiate(received) as GameObject;
          msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;
          msg.transform.SetParent(placeMessage.transform, false);
          msg.name = received.name;
          posted = true;
-
-        yield return null;
+         yield return null;
 
 
     }
@@ -92,9 +90,9 @@ public class GenerateMessage : MonoBehaviour
             msg.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = message;
             msg.transform.SetParent(placeMessage.transform, false);
             msg.name = sent.name;
+            posted = true;
         }
         else {
-
             StartCoroutine(WaitForReply(message));
 
         }

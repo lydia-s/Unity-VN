@@ -2870,6 +2870,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avatar
       objectReference: {fileID: 0}
+    - target: {fileID: 5073014497225214615, guid: 65f40c8b1b521e74bbed03a6da425a74,
+        type: 3}
+      propertyPath: m_Name
+      value: ViewBio
+      objectReference: {fileID: 0}
     - target: {fileID: 5073014498677026170, guid: 65f40c8b1b521e74bbed03a6da425a74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2975,15 +2980,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5073014497225214615, guid: 65f40c8b1b521e74bbed03a6da425a74,
-        type: 3}
-      propertyPath: m_Name
-      value: ViewBio
-      objectReference: {fileID: 0}
     - target: {fileID: 5073014497225214617, guid: 65f40c8b1b521e74bbed03a6da425a74,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5073014497225214617, guid: 65f40c8b1b521e74bbed03a6da425a74,
         type: 3}

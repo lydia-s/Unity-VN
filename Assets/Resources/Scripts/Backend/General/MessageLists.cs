@@ -48,32 +48,16 @@ public class MessageLists : MonoBehaviour
         string messageAndTag = message + "|" + tag;
 
         switch (name) {
-            case "Helen":
+            case "Group 21":
                 messageHistory1.Add(messageAndTag);//add this to list
-                break;
-            case "John":
-                messageHistory2.Add(messageAndTag);//add this to list
-                break;
-            case "John1":
-                messageHistory3.Add(messageAndTag);//add this to list
-                break;
-            default:
                 break;
         }
         
     }
     public void LoadMessagesFromList(string name) {
         switch (name) {
-            case "Helen":
+            case "Group 21":
                 LoadMessages(messageHistory1);
-                break;
-            case "John":
-                LoadMessages(messageHistory2);
-                break;
-            case "John1":
-                LoadMessages(messageHistory3);
-                break;
-            default:
                 break;
         }
         

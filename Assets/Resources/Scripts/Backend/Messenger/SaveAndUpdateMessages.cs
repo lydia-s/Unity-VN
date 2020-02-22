@@ -73,7 +73,7 @@ public class SaveAndUpdateMessages : MonoBehaviour
     void Start()
     {
         LoadMessagesFromFile();
-        
+        Debug.Log("loaded messages");
     }
 
 

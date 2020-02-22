@@ -27,8 +27,6 @@ public class GenerateContacts : MonoBehaviour
     //Add contact to dictionary
     public void AddContacts() {
      
-        SetContact("Helen", 23, "Musician, nature lover", profile_img);
-        SetContact("John", 21, "Painter, writer, artist", profile_img1);
-        SetContact("John1", 21, "Painter, writer, artist", profile_img1);
+        SetContact("Group 21", 23, "Group chat for our project :P", profile_img);
     }
 }
