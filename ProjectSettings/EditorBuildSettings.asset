@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Conext.unity
     guid: 33baef367ed4060419025a6a289ef2fa
+  - enabled: 1
+    path: Assets/Resources/Scenes/Synonymous.unity
+    guid: 6bcf05a9f4c19d143bbeae12bc833256
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

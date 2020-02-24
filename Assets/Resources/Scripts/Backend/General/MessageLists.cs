@@ -46,7 +46,6 @@ public class MessageLists : MonoBehaviour
      */
     public void SaveMessageToList(string message, string tag, string name) {
         string messageAndTag = message + "|" + tag;
-
         switch (name) {
             case "Group 21":
                 messageHistory1.Add(messageAndTag);//add this to list

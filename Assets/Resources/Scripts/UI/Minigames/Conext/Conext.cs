@@ -128,11 +128,6 @@ public class Conext : MonoBehaviour
             yield return new WaitForSeconds(time);
             StartCoroutine(ConextStart());
         }
-            
-        
-       
-        
-
     }
 
     public void CheckCorrect(Dictionary<string, string> tempDict, string s, string secretConnection) {

@@ -90,6 +90,7 @@ public class RadialMenu : MonoBehaviour
                 statsBars.ReduceSleep(0.5f);
                 clock.timeStart += 30f;
                 PerformAnimation(action);
+                SceneManager.LoadScene("Synonymous");
                 break;
             case "study":
                 statsBars.ReduceSanity(0.5f);

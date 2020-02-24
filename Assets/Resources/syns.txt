@@ -1,0 +1,3 @@
+hello=greetings-true,goodbye-false,No-false,Yes-false
+twelve=dozen-true,several-false,fortnight-false,quarter-false
+cat=feline-true,canine-false,lupine-false,alpine-false
