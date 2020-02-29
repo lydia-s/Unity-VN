@@ -79,7 +79,6 @@ public class RadialMenu : MonoBehaviour
                 PerformAnimation(action);
                 break;
             case "work":
-                statsBars.IncreaseProgress(0.5f);
                 statsBars.ReduceSleep(2.0f);
                 statsBars.ReduceSanity(1.5f);
                 clock.timeStart += 60f;

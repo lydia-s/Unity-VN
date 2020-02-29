@@ -24,6 +24,7 @@ public class StatBars : MonoBehaviour
     public Slider submissionBar;
     public TextMeshProUGUI percentageProgress;
     public static bool IsLoaded = false;
+
     
    
     // Start is called before the first frame update
@@ -52,11 +53,16 @@ public class StatBars : MonoBehaviour
 
 
     }
+
+
     void UpdateProgress() {
-        if (((CurrentProgress / MaxProgress) * 100)<=100)
+        if (CurrentProgress >= MaxProgress)
         {
-            string percent = "" + (CurrentProgress / MaxProgress) * 100 + "%";
+            string percent = "" + "100" + "%";
             percentageProgress.text = percent;
+        }
+        else {
+            percentageProgress.text = "" + (CurrentProgress / MaxProgress) *100 + "%";
         }
         sanityBar.value = CurrentSanity / MaxSanity;
         sleepBar.value = CurrentSleep / MaxSleep;
@@ -104,8 +110,16 @@ public class StatBars : MonoBehaviour
     }
     public void IncreaseProgress(float progress)
     {
-        CurrentProgress += progress;
-        submissionBar.value =CurrentProgress/MaxProgress;
+        if (CurrentProgress > MaxProgress)
+        {
+            CurrentProgress = MaxProgress;
+            submissionBar.value = CurrentProgress / MaxProgress;
+        }
+        else {
+            CurrentProgress += progress;
+            submissionBar.value = CurrentProgress / MaxProgress;
+        }
+        
 
     }
 

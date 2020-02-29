@@ -32,6 +32,7 @@ public class Conext : MonoBehaviour
     public bool selected = false;
     int rounds = 0;
     public GameObject card;
+    StatBars statsBars;
     //dictionary words
     //string relation
     //int lives
@@ -43,6 +44,13 @@ public class Conext : MonoBehaviour
         card.GetComponent<Animator>().enabled = false;
         ReadInDictionary();
         StartCoroutine(ConextStart());
+    }
+
+    void IncrementProgress() {
+        statsBars = GameObject.Find("StatsBars").GetComponent<StatBars>();//get our stats bar
+        if (points>0) {
+            statsBars.IncreaseProgress(points);
+        }
     }
 
     // Update is called once per frame
@@ -118,6 +126,7 @@ public class Conext : MonoBehaviour
         rounds++;
         if (rounds == 3)
         {
+            IncrementProgress();
             SceneManager.LoadScene("Room");
         }
         else {

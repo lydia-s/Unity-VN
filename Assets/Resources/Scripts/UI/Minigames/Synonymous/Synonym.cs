@@ -21,11 +21,20 @@ public class Synonym : MonoBehaviour
     public static bool selected = false;
     public static string buttonText = "";
     Dictionary<string, string> tempDict;//contains synonyms for one word
+    StatBars statsBars;
     // Start is called before the first frame update
     void Start()
     {
         ReadInDictionary();
         StartCoroutine(StartRounds());
+    }
+    void IncrementProgress()
+    {
+        statsBars = GameObject.Find("StatsBars").GetComponent<StatBars>();//get our stats bar
+        if (score > 0)
+        {
+            statsBars.IncreaseProgress(score);
+        }
     }
 
     // Update is called once per frame
@@ -110,6 +119,7 @@ public class Synonym : MonoBehaviour
             }
 
         }
+        IncrementProgress();
         SceneManager.LoadScene("Room");
     }
 }
