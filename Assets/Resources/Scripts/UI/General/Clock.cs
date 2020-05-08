@@ -14,6 +14,7 @@ public class Clock : MonoBehaviour
     public Dictionary<int, string> weekDays = new Dictionary<int, string> { { 0, "Friday" }, { 1, "Saturday" }, { 2, "Sunday" }, { 3, "Monday" }, };
     public int dayNum = 0;
     StatBars statsBars;
+    public static int timeSinceLastChoice = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,9 @@ public class Clock : MonoBehaviour
         clock.text = minutes + " : " + seconds;
         if (seconds1 != seconds) {
             statsBars.ReduceSleep(0.0005f);
+            statsBars.ReduceSpirit(0.0005f);
         }
+
         seconds1 = seconds;
         if (Int32.Parse(minutes) == 24) {
             timeStart = 0;

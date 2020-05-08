@@ -13,12 +13,13 @@ public class InkTestingScript : MonoBehaviour
     public TextMeshProUGUI avatarName;
     public static string playerName = "";
     string savedState= "";
+    public GameObject worldClock;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        GameObject worldClock = GameObject.Find("WorldClock");
+        worldClock = FindClock();//where the MessageLists script is attached
         worldClock.GetComponent<MessageLists>().LoadMessagesFromList(avatarName.text);//load messages when you enter
         story = new Story(inkJSON.text);
         story.variablesState["player_name"] = playerName;//set player name
@@ -33,7 +34,11 @@ public class InkTestingScript : MonoBehaviour
             StartCoroutine(RefreshUI());
         }  
     }
-    
+    public GameObject FindClock() {
+        GameObject worldClock = GameObject.Find("WorldClock");
+
+        return worldClock;
+    }
     public void ResetState()
     {
         story.ResetState();
@@ -45,7 +50,6 @@ public class InkTestingScript : MonoBehaviour
         string tag = "";//tag to label message
         string name = avatarName.text;//name of contact
         string loadedText = "";//text to post
-        GameObject worldClock = GameObject.Find("WorldClock");//where the MessageLists script is attached
         //if (!story.canContinue) {//this is in case you leave the scene without making a choice, you will have the same choices displayed when you return
         //    DisplayChoices();
         //    yield break;
@@ -62,7 +66,7 @@ public class InkTestingScript : MonoBehaviour
             foreach (string s in messages) {
 
                 if (s!="") {
-                    Debug.Log(loadedText + story.canContinue.ToString());
+                   // Debug.Log(loadedText + story.canContinue.ToString());
                     savedState = story.state.ToJson();
                     worldClock.GetComponent<MessageLists>().SaveStoryState(name, savedState);
                     PostMessage(s, tag, name);
@@ -79,7 +83,6 @@ public class InkTestingScript : MonoBehaviour
     }
 
     public void DisplayChoices() {
-        GameObject worldClock = GameObject.Find("WorldClock");//where the MessageLists script is attached
         foreach (Choice choice in story.currentChoices)
         {
             Button choiceButton = Instantiate(buttonPrefab) as Button;
@@ -91,6 +94,7 @@ public class InkTestingScript : MonoBehaviour
                 worldClock.GetComponent<MessageLists>().SaveStoryState(name, savedState);
                 savedState = story.state.ToJson();
                 EraseUI();//this must execute after you make a choice
+                Clock.timeSinceLastChoice = 0;
             });
         }
     }

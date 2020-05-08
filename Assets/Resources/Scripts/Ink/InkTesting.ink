@@ -1,32 +1,36 @@
 #VAR snitch = false
 #VAR cover = false
 VAR player_name = "Lydia"
-How is it going? #Received
+VAR char_1 = "AngryPanda"
+VAR char_2 = "Mike"
+VAR char_3 = "Ghux'o"
+
+{char_1}: How is it going? #Received
 {player_name}? #Received
-* To XxyzxX: A little behind#Sent
+* A little behind#Sent
 -> start_char2
-* To XxyzxX: Nearly there#Sent
+* Nearly there#Sent
 ->start_char2
-* To XxyzxX: Nearly there#Sent
+* Nearly there#Sent
 ->start_char2
 
 ==start_char2==
-Lucifer to you: I need to talk to you about something#Received
+{char_2} to you: I need to talk to you about something#Received
 ->char2_01
 
 
 ==char2_01==
-* I haven't got time#Sent 
+* To {char_2}: I haven't got time#Sent 
 -> char2_plead
-+ What's up?#Sent
++ To {char_2}: What's up?#Sent
 -> char2_02
 
 ==char2_02==
-I can't find the notes#Received
+{char_2} to you: I can't find the notes#Received
 ->END
 
 ==char2_plead==
-Please it's really important#Received
+{char_2} to you: Please it's really important#Received
 ->char2_01
 
 
